@@ -5,6 +5,10 @@
 | 난이도 | 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/5.svg"/> | [20154](https://www.acmicpc.net/problem/20154) | [이 구역의 승자는 누구야?!](https://www.acmicpc.net/problem/20154) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [8979](https://www.acmicpc.net/problem/8979) | [올림픽](https://www.acmicpc.net/problem/8979) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [3085](https://www.acmicpc.net/problem/3085) | [사탕 게임](https://www.acmicpc.net/problem/3085) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [1138](https://www.acmicpc.net/problem/1138) | [한 줄로 서기](https://www.acmicpc.net/problem/1138) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [1713](https://www.acmicpc.net/problem/1713) | [후보 추천하기](https://www.acmicpc.net/problem/1713) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [5639](https://www.acmicpc.net/problem/5639) | [이진 검색 트리](https://www.acmicpc.net/problem/5639) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [16932](https://www.acmicpc.net/problem/16932) | [모양 만들기](https://www.acmicpc.net/problem/16932) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [20327](https://www.acmicpc.net/problem/20327) | [배열 돌리기 6](https://www.acmicpc.net/problem/20327) |
+
+
