@@ -15,15 +15,20 @@
 
 ## 2022 01/14 ~ 01/20
 
-### `Essential Problem`
+#### `Essential Problem`
 | 난이도 | 번호 | 문제 이름 | 태그 |
 |:------:|:----:|:---------:|:----------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [9095](https://www.acmicpc.net/problem/9095) | [1, 2, 3 더하기](https://www.acmicpc.net/problem/9095) | [다이나믹 프로그래밍](https://solved.ac/problems/tags/dp) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [1149](https://www.acmicpc.net/problem/1149) | [RGB거리](https://www.acmicpc.net/problem/1149) | [다이나믹 프로그래밍](https://solved.ac/problems/tags/dp) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [2589](https://www.acmicpc.net/problem/2589) | [보물섬](https://www.acmicpc.net/problem/2589) | [너비 우선 탐색](https://solved.ac/problems/tags/bfs) |
 
-### 추가 문제
-
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [18429](https://www.acmicpc.net/problem/18429) | [근손실](https://www.acmicpc.net/problem/18429) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [1326](https://www.acmicpc.net/problem/1326) | [폴짝폴짝](https://www.acmicpc.net/problem/1326) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [15989](https://www.acmicpc.net/problem/15989) | [1, 2, 3 더하기 4](https://www.acmicpc.net/problem/15989) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [15992](https://www.acmicpc.net/problem/15992) | [1, 2, 3 더하기 7](https://www.acmicpc.net/problem/15992) |
 
 <br> <br>
 
