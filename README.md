@@ -11,6 +11,8 @@
 * 저장소에 개인 디렉토리를 생성하여 날짜별로 푼 문제의 번호와 코드를 저장합니다. (날짜는 매주 **목요일** 기준)
 * 매주 **6문제이상** 풀고 완성된 코드 또는 리뷰를 받고 싶은 코드를 저장합니다.
 
+<br>
+
 ***
 
 ## 2022 01/14 ~ 01/20
@@ -30,7 +32,7 @@
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [15989](https://www.acmicpc.net/problem/15989) | [1, 2, 3 더하기 4](https://www.acmicpc.net/problem/15989) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [15992](https://www.acmicpc.net/problem/15992) | [1, 2, 3 더하기 7](https://www.acmicpc.net/problem/15992) |
 
-<br> <br>
+<br> <br> <br>
 
 ## 2022 01/07 ~ 01/13
 
