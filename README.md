@@ -15,7 +15,29 @@
 
 ***
 
-## 2022 01/14 ~ 01/20
+## 2022 01/20 ~ 01/27
+
+#### `Essential Problem`
+| 난이도 | 번호 | 문제 이름 | 태그 |
+|:------:|:----:|:---------:|:----------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [2624](https://www.acmicpc.net/problem/2624) | [동전 바꿔주기](https://www.acmicpc.net/problem/2624) | [다이나믹 프로그래밍](https://solved.ac/problems/tags/dp) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [6987](https://www.acmicpc.net/problem/6987) | [월드컵](https://www.acmicpc.net/problem/6987) | [백트래킹](https://solved.ac/problems/tags/backtracking) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [7573](https://www.acmicpc.net/problem/7573) | [고기잡이](https://www.acmicpc.net/problem/7573) | [브루트포스](https://solved.ac/problems/tags/bruteforcing) |
+
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [4811](https://www.acmicpc.net/problem/4811) | [알약](https://www.acmicpc.net/problem/4811) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [1405](https://www.acmicpc.net/problem/1405) | [미친 로봇](https://www.acmicpc.net/problem/1405) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [16926](https://www.acmicpc.net/problem/16926) | [배열 돌리기 1](https://www.acmicpc.net/problem/16926) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16927](https://www.acmicpc.net/problem/16927) | [배열 돌리기 2](https://www.acmicpc.net/problem/16927) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [16935](https://www.acmicpc.net/problem/16935) | [배열 돌리기 3](https://www.acmicpc.net/problem/16935) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17406](https://www.acmicpc.net/problem/17406) | [배열 돌리기 4](https://www.acmicpc.net/problem/17406) |
+
+<br> <br> <br>
+
+
+## 2022 01/13 ~ 01/20
 
 #### `Essential Problem`
 | 난이도 | 번호 | 문제 이름 | 태그 |
@@ -34,7 +56,7 @@
 
 <br> <br> <br>
 
-## 2022 01/07 ~ 01/13
+## 2022 01/06 ~ 01/13
 
 | 난이도 | 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
@@ -45,4 +67,7 @@
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [1713](https://www.acmicpc.net/problem/1713) | [후보 추천하기](https://www.acmicpc.net/problem/1713) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [5639](https://www.acmicpc.net/problem/5639) | [이진 검색 트리](https://www.acmicpc.net/problem/5639) |
 
+
+<br> <br> 
+[3980, 17135, 1941, 14391]
 
