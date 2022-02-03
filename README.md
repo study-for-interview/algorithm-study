@@ -15,6 +15,25 @@
 
 ***
 
+## 2022 01/27 ~ 02/03
+
+#### `Essential Problem`
+| 난이도 | 번호 | 문제 이름 | 태그 |
+|:------:|:----:|:---------:|:----------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [12865](https://www.acmicpc.net/problem/12865) | [평범한 배낭](https://www.acmicpc.net/problem/12865) | [다이나믹 프로그래밍](https://solved.ac/problems/tags/dp) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14502](https://www.acmicpc.net/problem/14502) | [연구소](https://www.acmicpc.net/problem/14502) | [백트래킹](https://solved.ac/problems/tags/backtracking) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [15683](https://www.acmicpc.net/problem/15683) | [감시](https://www.acmicpc.net/problem/15683) | [브루트포스](https://solved.ac/problems/tags/bruteforcing) |
+
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17404](https://www.acmicpc.net/problem/17404) | [RGB거리 2](https://www.acmicpc.net/problem/17404) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17141](https://www.acmicpc.net/problem/17141) | [연구소 2](https://www.acmicpc.net/problem/17141) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14503](https://www.acmicpc.net/problem/14503) | [로봇 청소기](https://www.acmicpc.net/problem/14503) |
+
+<br> <br> <br>
+
+
 ## 2022 01/20 ~ 01/27
 
 #### `Essential Problem`
