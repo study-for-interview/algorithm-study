@@ -15,6 +15,16 @@
 
 ***
 
+## 2022 02/03 ~ 02/10
+#### `Essential Problem`
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14499](https://www.acmicpc.net/problem/14499 ) | [주사위 굴리기](https://www.acmicpc.net/problem/14499 ) |
+
+
+<br> <br> <br>
+
+
 ## 2022 01/27 ~ 02/03
 
 #### `Essential Problem`
