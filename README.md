@@ -15,6 +15,25 @@
 
 ***
 
+## 2022 02/03 ~ 02/10
+#### `Essential Problem`
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14499](https://www.acmicpc.net/problem/14499 ) | [주사위 굴리기](https://www.acmicpc.net/problem/14499 ) |
+| `Level 2` | [2020 KAKAO BLIND RECRUITMENT 1번](https://programmers.co.kr/learn/courses/30/lessons/60057) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) |
+| `Level 2` | [2020 KAKAO BLIND RECRUITMENT 2번](https://programmers.co.kr/learn/courses/30/lessons/60058) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) |
+
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [13302](https://www.acmicpc.net/problem/13302) | [리조트](https://www.acmicpc.net/problem/13302) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [5546](https://www.acmicpc.net/problem/5546) | [파스타](https://www.acmicpc.net/problem/5546) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [3980](https://www.acmicpc.net/problem/3980) | [선발 명단](https://www.acmicpc.net/problem/3980) |
+
+
+<br> <br> <br>
+
+
 ## 2022 01/27 ~ 02/03
 
 #### `Essential Problem`
