@@ -15,6 +15,25 @@
 
 ***
 
+## 2022 02/010 ~ 02/17
+#### `Essential Problem`
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14863](https://www.acmicpc.net/problem/14863 ) | [서울에서 경산까지](https://www.acmicpc.net/problem/14863 ) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17135](https://www.acmicpc.net/problem/17135 ) | [캐슬 디펜스](https://www.acmicpc.net/problem/17135 ) |
+| `Level 3` | [2020 KAKAO BLIND RECRUITMENT 3번](https://programmers.co.kr/learn/courses/30/lessons/60059) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
+
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| `Level 1` | [2020 KAKAO 인턴십 1](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17281](https://www.acmicpc.net/problem/17281) | [⚾](https://www.acmicpc.net/problem/17281) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17845](https://www.acmicpc.net/problem/17845) | [수강 과목](https://www.acmicpc.net/problem/17845) |
+
+
+
+<br> <br> <br>
+
 ## 2022 02/03 ~ 02/10
 #### `Essential Problem`
 | 난이도 | 문제 번호 | 문제 이름 |
