@@ -37,7 +37,6 @@ void move(int dir){
         dice[6] = dice[5];
         dice[5] = tmp;
     }
-
 }
 
 int main() {
