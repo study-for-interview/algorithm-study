@@ -15,7 +15,26 @@
 
 ***
 
-## 2022 02/010 ~ 02/17
+## 2022 02/17 ~ 02/24
+#### `Essential Problem`
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [13335](https://www.acmicpc.net/problem/13335 ) | [트럭](https://www.acmicpc.net/problem/13335 ) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [1374](https://www.acmicpc.net/problem/1374 ) | [강의실](https://www.acmicpc.net/problem/1374 ) |
+| `Level 2` | [2020 KAKAO 인턴십 2번](https://programmers.co.kr/learn/courses/30/lessons/67257) | [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257) |
+
+#### 추가 문제
+| 난이도 | 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| `Level 2` | [2020 KAKAO 채용연계형 인턴십](https://programmers.co.kr/learn/courses/30/lessons/81302) | [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) |
+| `Level 3` | [2020 KAKAO 인턴십 3번](https://programmers.co.kr/learn/courses/30/lessons/67258) | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) |
+| `Level 3` | [2020 KAKAO 인턴십 4번](https://programmers.co.kr/learn/courses/30/lessons/67259) | [경주로 건설](https://programmers.co.kr/learn/courses/30/lessons/67259) |
+
+
+
+<br> <br> <br>
+
+## 2022 02/01 ~ 02/17
 #### `Essential Problem`
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
@@ -26,7 +45,7 @@
 #### 추가 문제
 | 난이도 | 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
-| `Level 1` | [2020 KAKAO 인턴십 1](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
+| `Level 1` | [2020 KAKAO 인턴십 1번](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17281](https://www.acmicpc.net/problem/17281) | [⚾](https://www.acmicpc.net/problem/17281) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17845](https://www.acmicpc.net/problem/17845) | [수강 과목](https://www.acmicpc.net/problem/17845) |
 
