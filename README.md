@@ -24,7 +24,7 @@
 | `Level 2` | [2020 KAKAO 인턴십 2번](https://programmers.co.kr/learn/courses/30/lessons/67257) | [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257) |
 
 #### 추가 문제
-| 난이도 | 번호 | 문제 이름 |
+| 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | `Level 2` | [2020 KAKAO 채용연계형 인턴십](https://programmers.co.kr/learn/courses/30/lessons/81302) | [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) |
 | `Level 3` | [2020 KAKAO 인턴십 3번](https://programmers.co.kr/learn/courses/30/lessons/67258) | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) |
@@ -43,7 +43,7 @@
 | `Level 3` | [2020 KAKAO BLIND RECRUITMENT 3번](https://programmers.co.kr/learn/courses/30/lessons/60059) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
 
 #### 추가 문제
-| 난이도 | 번호 | 문제 이름 |
+| 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | `Level 1` | [2020 KAKAO 인턴십 1번](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17281](https://www.acmicpc.net/problem/17281) | [⚾](https://www.acmicpc.net/problem/17281) |
@@ -62,7 +62,7 @@
 | `Level 2` | [2020 KAKAO BLIND RECRUITMENT 2번](https://programmers.co.kr/learn/courses/30/lessons/60058) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) |
 
 #### 추가 문제
-| 난이도 | 번호 | 문제 이름 |
+| 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [13302](https://www.acmicpc.net/problem/13302) | [리조트](https://www.acmicpc.net/problem/13302) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [5546](https://www.acmicpc.net/problem/5546) | [파스타](https://www.acmicpc.net/problem/5546) |
