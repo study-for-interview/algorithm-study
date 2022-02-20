@@ -19,6 +19,7 @@
 #### `Essential Problem`
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [17609](https://www.acmicpc.net/problem/17609 ) | [회문](https://www.acmicpc.net/problem/17609 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [13335](https://www.acmicpc.net/problem/13335 ) | [트럭](https://www.acmicpc.net/problem/13335 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [1374](https://www.acmicpc.net/problem/1374 ) | [강의실](https://www.acmicpc.net/problem/1374 ) |
 | `Level 2` | [2020 KAKAO 인턴십 2번](https://programmers.co.kr/learn/courses/30/lessons/67257) | [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257) |
