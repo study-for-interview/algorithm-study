@@ -21,11 +21,9 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [9207](https://www.acmicpc.net/problem/9207 ) | [페그 솔리테어](https://www.acmicpc.net/problem/9207 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16472](https://www.acmicpc.net/problem/16472 ) | [고냥이](https://www.acmicpc.net/problem/16472 ) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [3190](https://www.acmicpc.net/problem/3190 ) | [뱀](https://www.acmicpc.net/problem/3190 ) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17406](https://www.acmicpc.net/problem/17406 ) | [배열 돌리기 4](https://www.acmicpc.net/problem/17406 ) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [1941](https://www.acmicpc.net/problem/1941 ) | [소문난 칠공주](https://www.acmicpc.net/problem/1941 ) |
-| `Level 3` | [2020 KAKAO 인턴십 3번](https://programmers.co.kr/learn/courses/30/lessons/67258) | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) |
+| `Level 2` | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17680) | [[1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680) |
 
+* **금주 추가 3문제는 자유**
 
 
 
@@ -163,5 +161,11 @@
 
 
 <br> <br> 
-[14391]
 
+* 백업
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [3190](https://www.acmicpc.net/problem/3190 ) | [뱀](https://www.acmicpc.net/problem/3190 ) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17406](https://www.acmicpc.net/problem/17406 ) | [배열 돌리기 4](https://www.acmicpc.net/problem/17406 ) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [1941](https://www.acmicpc.net/problem/1941 ) | [소문난 칠공주](https://www.acmicpc.net/problem/1941 ) |
+| `Level 3` | [2020 KAKAO 인턴십 3번](https://programmers.co.kr/learn/courses/30/lessons/67258) | [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) |
