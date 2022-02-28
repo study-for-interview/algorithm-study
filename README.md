@@ -21,7 +21,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [9207](https://www.acmicpc.net/problem/9207 ) | [페그 솔리테어](https://www.acmicpc.net/problem/9207 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16472](https://www.acmicpc.net/problem/16472 ) | [고냥이](https://www.acmicpc.net/problem/16472 ) |
-| `Level 2` | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17680) | [[1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680) |
+| `Level 2` | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges) | [[1차] 캐시](https://programmers.co.kr/learn/courses/30/lessons/17680) |
 
 * **금주 추가 3문제는 자유**
 
