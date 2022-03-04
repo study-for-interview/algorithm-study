@@ -49,11 +49,9 @@ class Solution {
                     // System.out.println(next.start );
                     // System.out.println(cur.end + 1*1000 );
                     // System.out.println();
-
                 }
             }
             max = Math.max(max, count);
-           
         }
 
         return max;

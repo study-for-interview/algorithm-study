@@ -24,7 +24,7 @@ public class Main {
     }
                                   // 상 우 하 좌
     public static final int[] dx = {-1, 0, 1, 0};
-    public static final int[] dy = {0, -1, 0, 1};
+    public static final int[] dy = {0, 1, 0, -1};
     
     public static void solution(char[][] map){
 
