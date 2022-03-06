@@ -19,7 +19,6 @@ class Solution {
             }
         }
     }
-    
 
     public static int solution(String[] lines) {
 
@@ -72,7 +71,7 @@ class Solution {
             "2016-09-15 01:00:07.000 2s"
         }));
 
-        // // 7
+        // 7
         System.out.println(solution(new String[]{
             "2016-09-15 20:59:57.421 0.351s",
             "2016-09-15 20:59:58.233 1.181s",
