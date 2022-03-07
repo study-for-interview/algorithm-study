@@ -1,4 +1,4 @@
-package 최단경로_G3_파티;
+package week9.최단경로_G3_파티;
 
 import java.io.*;
 import java.util.*;
