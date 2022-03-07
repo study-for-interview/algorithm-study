@@ -1,19 +1,28 @@
 # algorithm-study
 
-### :calendar: 날짜: 매주 목 10시
+### :calendar: 날짜: 매주 월/목 4시
 
 <br>
 
 ### :running: 규칙
-* 문제는 매주 6문제이상 업데이트 됩니다.
-* 업데이트된 문제중에는 반드시 풀어야 하는 **Essential Problem** 3문제가 있습니다.
-* 따로 풀고싶은 문제가 있다면 Essential 3문제를 제외하고 다른 문제를 풀어서 올려도 상관없습니다.
-* 저장소의 개인 디렉토리에 날짜별로 푼 문제의 번호와 코드를 저장합니다. (날짜는 매주 **목요일** 기준)
-* 매주 **6문제이상** 풀고 완성된 코드 또는 리뷰를 받고 싶은 코드를 저장합니다.
+* 스터디는 매주 2회(월요일, 목요일) 각각 3문제씩 풀이
+* 풀고싶은 문제가 있다면 깃헙 이슈에 댓글로 등록
+* 스터디 시작전까지 3문제를 풀고 저장하기 (틀린 코드라도 일단 저장)
 
 <br>
 
 ***
+
+## 2022 03/03 ~ 03/07
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16234](https://www.acmicpc.net/problem/16234 ) | [인구 이동](https://www.acmicpc.net/problem/16234 ) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [1238](https://www.acmicpc.net/problem/1238 ) | [파티](https://www.acmicpc.net/problem/1238 ) |
+| `Level 3` | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17676) | [추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) |
+
+
+
+<br> <br> <br>
 
 ## 2022 02/24 ~ 03/03
 #### `Essential Problem`
@@ -29,7 +38,6 @@
 
 
 <br> <br> <br>
-
 
 ## 2022 02/17 ~ 02/24
 #### `Essential Problem`
