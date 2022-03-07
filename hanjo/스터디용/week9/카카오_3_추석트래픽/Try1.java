@@ -1,8 +1,9 @@
 package week9.카카오_3_추석트래픽;
+
 import java.util.*;
 import java.text.*;
 
-class Solution {
+public class Try1 {
 
     public static class Log {
         public long start;
@@ -35,19 +36,8 @@ class Solution {
         for(Log cur : logs){
             int count = 0;
             for(Log next : logs){
-
-                // System.out.println(cur.start);
-                // System.out.println(cur.end);
-                // System.out.println(next.start);
-                // System.out.println(cur.end + 1*1000);
-                // System.out.println();
-
                 if(cur.start <= next.start && next.start < cur.end + 1*1000){
                     count++;
-                    // System.out.println(cur.start );
-                    // System.out.println(next.start );
-                    // System.out.println(cur.end + 1*1000 );
-                    // System.out.println();
                 }
             }
             max = Math.max(max, count);
@@ -93,8 +83,20 @@ class Solution {
  * 2. S와 T를 만들어줌
  * 3. S - T 해서 작업 시작 시간 구함
  * 4. 작업을 클래스로 만들고 리스트에 넣고 순회
- * 
+ * ---------------------
  * 1. 작업을 하나씩 순회
  * 2. 시작시간 ~ (종료시간 + 1초) 내에 존재하는 작업 개수를 세고 max 업데이트
  *      -> 어케세지? -> 시작시간이 저 범위내로 존재하는 작업을 세면됨
+ */
+
+ /**
+ * ================================================================================
+ * 링크 : https://programmers.co.kr/learn/courses/30/lessons/17676
+ * 성공여부 : 실패 (테케 5개틀림)
+ * 풀이시간 : 2h
+ * ================================================================================
+ * 
+ * 문자열을 시간으로 파싱하고, 구간을 잘 설정해야 하는 문제 
+ * 뭔가 처음 생각했던 풀이에 갇혀서 결국 끝까지 풀지 못했음 (다시 풀어야함)
+ * 
  */
