@@ -43,6 +43,7 @@
 |그래프_G5_이모티콘|https://www.acmicpc.net/problem/14226|
 |그래프_G5_숨바꼭질3|https://www.acmicpc.net/problem/13549|
 |그래프_G4_알고스팟|https://www.acmicpc.net/problem/1261|
+|최단경로_G4_운동|https://www.acmicpc.net/problem/1956|
 
 
 <br>
@@ -54,4 +55,5 @@
 |탐욕법_2_조이스틱|https://programmers.co.kr/learn/courses/30/lessons/42860|
 |카카오_2_주차요금계산|https://programmers.co.kr/learn/courses/30/lessons/92341|
 |그래프탐색_3_네트워크|https://programmers.co.kr/learn/courses/30/lessons/43162|
+|그래프탐색_3_여행경로|https://www.acmicpc.net/problem/1261|
 |카카오_2_순위검색|https://programmers.co.kr/learn/courses/30/lessons/72412|
