@@ -18,6 +18,7 @@
 |W9D3|완전탐색_S5_날짜계산|https://www.acmicpc.net/problem/1476|
 |W9D3|그래프_S2_연결요소의개수|https://www.acmicpc.net/problem/11724|
 |W10D3|완전탐색_G5_리모컨|https://www.acmicpc.net/problem/1107|
+|W10D4|완전탐색_G5_테트로미노|https://www.acmicpc.net/problem/14500|
 
 <br>
 
@@ -25,7 +26,6 @@
 
 |카테고리|링크|
 |---|---|
-|완전탐색_G5_테트로미노|https://www.acmicpc.net/problem/14500|
 |완전탐색_S1_카잉달력|https://www.acmicpc.net/problem/6064|
 |완전탐색_S3_수이어쓰기1|https://www.acmicpc.net/problem/1748|
 |완전탐색_S3_123더하기|https://www.acmicpc.net/problem/9095|
