@@ -17,6 +17,7 @@
 |W8D2|완전탐색_B2_일곱난쟁이|https://www.acmicpc.net/problem/2309|
 |W9D3|완전탐색_S5_날짜계산|https://www.acmicpc.net/problem/1476|
 |W9D3|그래프_S2_연결요소의개수|https://www.acmicpc.net/problem/11724|
+|W10D3|완전탐색_G5_리모컨|https://www.acmicpc.net/problem/1107|
 
 <br>
 
@@ -24,7 +25,6 @@
 
 |카테고리|링크|
 |---|---|
-|완전탐색_G5_리모컨|https://www.acmicpc.net/problem/1107|
 |완전탐색_G5_테트로미노|https://www.acmicpc.net/problem/14500|
 |완전탐색_S1_카잉달력|https://www.acmicpc.net/problem/6064|
 |완전탐색_S3_수이어쓰기1|https://www.acmicpc.net/problem/1748|
@@ -53,7 +53,6 @@
 |카테고리|링크|
 |---|---|
 |탐욕법_2_조이스틱|https://programmers.co.kr/learn/courses/30/lessons/42860|
-|카카오_2_주차요금계산|https://programmers.co.kr/learn/courses/30/lessons/92341|
 |그래프탐색_3_네트워크|https://programmers.co.kr/learn/courses/30/lessons/43162|
 |그래프탐색_3_여행경로|https://www.acmicpc.net/problem/1261|
 |카카오_2_순위검색|https://programmers.co.kr/learn/courses/30/lessons/72412|
