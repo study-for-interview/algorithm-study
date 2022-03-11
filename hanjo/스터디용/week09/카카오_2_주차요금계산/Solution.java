@@ -1,4 +1,4 @@
-package week9.카카오_2_주차요금계산;
+package week09.카카오_2_주차요금계산;
 
 import java.util.*;
 

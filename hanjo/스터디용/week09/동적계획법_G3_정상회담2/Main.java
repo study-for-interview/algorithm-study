@@ -1,4 +1,4 @@
-package week9.동적계획법_G3_정상회담2;
+package week09.동적계획법_G3_정상회담2;
 
 import java.io.*;
 
