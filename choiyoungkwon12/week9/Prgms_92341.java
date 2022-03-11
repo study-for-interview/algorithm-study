@@ -58,7 +58,7 @@ public class Prgms_92341 {
             }
         }
 
-        // 출차 기록 없는 차들은 23:59에 나간 것으로 계싼
+        // 출차 기록 없는 차들은 23:59에 나간 것으로 계산
         for (int i = 0; i < times.length; i++) {
             if (Objects.nonNull(times[i])) {
                 long timeGap = ChronoUnit.MINUTES.between(times[i], DEADLINE);
