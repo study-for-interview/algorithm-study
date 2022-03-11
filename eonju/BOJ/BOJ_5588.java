@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
-class Main {
+class BOJ_5588 {
 
     private static int M;
     private static int N;
@@ -47,11 +47,11 @@ class Main {
             for (int j = 0; j < N; j++) {
                 Location photoLocation = photo.get(j);
 
-                int moveX = mapLocation.x - photoLocation.x;
-                int moveY = mapLocation.y - photoLocation.y;
+                int moveX = photoLocation.x - mapLocation.x;
+                int moveY = photoLocation.y - mapLocation.y;
 
                 if (compare(moveX, moveY)) {
-                    System.out.println((moveX * -1) + " " + (moveY * -1));
+                    System.out.println(moveX + " " + moveY);
                     return;
                 }
             }
@@ -63,7 +63,7 @@ class Main {
 
         for (int i = 0; i < M; i++) {
             Location location = map.get(i);
-            Location mapNewLocation = new Location(location.x - moveX, location.y - moveY);
+            Location mapNewLocation = new Location(location.x + moveX, location.y + moveY);
 
             for (int j = 0; j < N; j++) {
                 if (photo.get(j).equals(mapNewLocation)) {
