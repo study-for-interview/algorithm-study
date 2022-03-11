@@ -1,4 +1,4 @@
-package week9.카카오_3_추석트래픽;
+package week09.카카오_3_추석트래픽;
 
 import java.util.*;
 import java.text.*;
