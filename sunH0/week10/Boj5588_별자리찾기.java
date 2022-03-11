@@ -1,11 +1,24 @@
+package Search;
+
 import java.io.*;
 import java.util.*;
+
+class Dot{
+    int x;
+    int y;
+
+    Dot(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+}
 
 public class Boj5588_별자리찾기 {
     static int M,N;
     static Dot[] arrM, arrN;
 
-    public static void main(String[] args) throws Excetion {
+    public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
         M = sc.nextInt();
@@ -25,44 +38,34 @@ public class Boj5588_별자리찾기 {
 		}
 
         for(int i=0; i<N;i++){
-            int xx = arrM[0].x - arrN[i].x;
-            int yy = arrM[0].y - arrN[i].x;
+            int xx = arrN[i].x -arrM[0].x;
+            int yy = arrN[i].y -arrM[0].y;
 
             if(search(xx, yy)){
                 System.out.println(xx + " " + yy);
             }
         }
+        sc.close();
 
     }
 
     static boolean search(int xx, int yy){
-        for(int m=0; m<M; m++){
-            boolean check = false;
-
-            int nX = dX + arrM[m].X;
-			int nY = dY + arrM[m].Y;
+        
+        for(int i=0; i<M; i++){
+            
+            int nx = xx + arrM[i].x;
+			int ny = yy + arrM[i].y;
+            boolean flag = false;
 
             for(int n=0;n<N;n++)
 			{
-				if(mX == arrN[n].X && mY == arrN[n].Y)
-                    check = true;
+				if(nx == arrN[n].x && ny == arrN[n].y) flag = true;
 			}
+            if(flag==false) return false;
                     
         }
-        return check;
+        return true;
     }
 
 
 }
-
-class Dot{
-    int x;
-    int y;
-
-    Dot(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-}
-
