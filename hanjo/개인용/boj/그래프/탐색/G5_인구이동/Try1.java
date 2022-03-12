@@ -1,4 +1,4 @@
-package week09.그래프_G5_인구이동;
+package 그래프.탐색.G5_인구이동;
 
 import java.io.*;
 import java.util.*;

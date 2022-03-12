@@ -1,4 +1,4 @@
-package week10._S4_별자리찾기;
+package week10.완전탐색_S4_별자리찾기;
 
 import java.io.*;
 import java.util.*;
