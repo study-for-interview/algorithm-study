@@ -62,14 +62,6 @@ public class Main {
                 return;
             }
         }
-
-        // for(int i=0; i<n; i++){
-        //     // 거리 후보를 구함
-        //     int x = photo[i][0] - target[0][0];
-        //     int y = photo[i][1] - target[0][1];
-        //     // 거리 후보가 모든 target 좌표에 적합한지 확인
-        //     for()
-        // }
     }
 }
 
