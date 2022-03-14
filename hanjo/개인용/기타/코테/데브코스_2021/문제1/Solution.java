@@ -1,4 +1,4 @@
-package 데브코스1;
+package 코테.데브코스_2021.문제1;
 
 public class Solution {
 	

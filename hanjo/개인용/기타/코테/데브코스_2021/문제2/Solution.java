@@ -1,4 +1,4 @@
-package 데브코스2;
+package 코테.데브코스_2021.문제2;
 
 import java.util.*;
 
