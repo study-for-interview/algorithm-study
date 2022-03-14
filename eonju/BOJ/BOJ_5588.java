@@ -38,6 +38,7 @@ class BOJ_5588 {
             photo.add(new Location(x, y));
         }
         photo.sort(Comparator.comparingInt(x -> x.x));
+
         moveLocation();
     }
 
