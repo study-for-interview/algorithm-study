@@ -82,9 +82,7 @@ class Solution {
             if(!str.equals("")){
                 answer += str + " ";
             }
-            
         }
-        
 
         return answer;
     }
@@ -96,38 +94,83 @@ class Solution {
         return str.replace(String.valueOf(lower), "");
     }
 
-    public static void main(String args[]){
-        // HELLO WORLD
+    public static void main(String args[]){        
+
+        System.out.println("HELLO WORLD");
         System.out.println(solution("HaEaLaLaObWORLDb"));
-        // SIGONG J O A
+        System.out.println();
+
+        System.out.println("SIGONG J O A");
         System.out.println(solution("SpIpGpOpNpGJqOqA"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("AxAxAxAoBoBoB"));
-        // I AM
+        System.out.println();
+
+        System.out.println("I AM");
         System.out.println(solution("aIaAM"));
-        // AAA B A BBBB C BBBB C BB GG G G G RRRRRR
+        System.out.println();
+
+        System.out.println("AAA B A BBBB C BBBB C BB GG G G G RRRRRR");
         System.out.println(solution("AAAaBaAbBBBBbCcBdBdBdBcCeBfBeGgGGjGjGRvRvRvRvRvR"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("aaA"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("Aaa"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("HaEaLaLaOWaOaRaLaD"));
-        // HELLOWORLD
+        System.out.println();
+
+        System.out.println("HELLOWORLD");
         System.out.println(solution("aHELLOWORLDa"));
-        // HELL O WORLD
+        System.out.println();
+
+        System.out.println("HELL O WORLD");
         System.out.println(solution("HaEaLaLObWORLDb"));
-        // HELLO WORLD
+        System.out.println();
+
+        System.out.println("HELLO WORLD");
         System.out.println(solution("HaEaLaLaObWORLDb"));
-        // HELLO WORLD
+        System.out.println();
+
+        System.out.println("HELLO WORLD");
         System.out.println(solution("aHbEbLbLbOacWdOdRdLdDc"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("HELLO WORLD"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("xAaAbAaAx"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("AbAaAbAaCa"));
-        // invalid
+        System.out.println();
+
+        System.out.println("invalid");
         System.out.println(solution("AbAaAbAaC"));
+        System.out.println();
     }
 }
+
+/**
+ * ================================================================================
+ * 링크 : https://programmers.co.kr/learn/courses/30/lessons/1830
+ * 날짜 : 220314
+ * 성공여부 : 실패 (그리고 포기)
+ * 풀이시간 : 2h
+ * ================================================================================
+ * 
+ * 알고리즘 없이 그냥 빡구현 문제.
+ * 조건이 너무 많고 까다로워서 풀다가 포기함.. 시간을 너무 썼음 ㅜ
+ * 
+ */
