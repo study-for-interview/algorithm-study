@@ -7,7 +7,7 @@
 
 |날짜|카테고리|제목|링크|
 |---|---|---|---|
-|W8D2|완전탐색|S5_날짜계산|https://www.acmicpc.net/problem/1476||
+|W8D2|완전탐색|S5_날짜계산|https://www.acmicpc.net/problem/1476|
 |W6D3|그래프-탐색|L2_소수찾기|https://programmers.co.kr/learn/courses/30/lessons/43165|
 |W6D2|완전탐색|L2_소수찾기|https://programmers.co.kr/learn/courses/30/lessons/42839|
 |W5D4|구현|L3_디스크컨트롤러|https://programmers.co.kr/learn/courses/30/lessons/42627|
