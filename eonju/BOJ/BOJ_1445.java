@@ -50,33 +50,31 @@ class Main {
                 int nextI = nowI + moveHeight[i];
                 int nextJ = nowJ + moveWidth[i];
 
-                if(nextI <0 || nextJ <0 || nextI >= height ||nextJ >= width){
+                if (nextI < 0 || nextJ < 0 || nextI >= height || nextJ >= width) {
                     continue;
                 }
 
-                if(visited[nextI][nextJ]){
+                if (visited[nextI][nextJ]) {
                     continue;
                 }
 
-                if(map[nextI][nextJ].equals(".")){
+                if (map[nextI][nextJ].equals(".")) {
                     queue.add(new Node(nextI, nextJ, nowGarbage, nowNearGarbage));
                     visited[nextI][nextJ] = true;
                 }
 
-                if(map[nextI][nextJ].equals("F")){
+                if (map[nextI][nextJ].equals("F")) {
                     System.out.println(nowGarbage + " " + nowNearGarbage);
                     return;
                 }
 
-                if(map[nextI][nextJ].equals("n")){
-                    nowNearGarbage++;
-                    queue.add(new Node(nextI, nextJ, nowGarbage, nowNearGarbage));
+                if (map[nextI][nextJ].equals("n")) {
+                    queue.add(new Node(nextI, nextJ, nowGarbage, nowNearGarbage + 1));
                     visited[nextI][nextJ] = true;
                 }
 
-                if(map[nextI][nextJ].equals("g")){
-                    nowGarbage++;
-                    queue.add(new Node(nextI, nextJ, nowGarbage, nowNearGarbage));
+                if (map[nextI][nextJ].equals("g")) {
+                    queue.add(new Node(nextI, nextJ, nowGarbage + 1, nowNearGarbage));
                     visited[nextI][nextJ] = true;
                 }
 
