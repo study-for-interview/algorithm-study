@@ -15,7 +15,7 @@ public class Main {
         char[][] map = new char[n][m];
         for(int i=0; i<n; i++){
             char[] temp = br.readLine().toCharArray();
-            for(int j=0; j<n; j++){
+            for(int j=0; j<m; j++){
                 map[i][j] = temp[j];
             }
         }
@@ -43,14 +43,7 @@ public class Main {
             this.garbage = garbage;
             this.garbageSide = garbageSide;
         }
-
-        @Override
-        public String toString(){
-            return path + " " + garbage + " " + garbageSide; 
-            // return String.valueOf(path);
-        }
     }
-
     
     public static final int[] dx = {-1, 0, 1, 0};
     public static final int[] dy = {0, 1, 0, -1};
@@ -66,7 +59,7 @@ public class Main {
     
         Dist[][] dist = new Dist[n][m];
         for(int x=0; x<n; x++){
-            for(int y=0; y<n; y++){
+            for(int y=0; y<m; y++){
                 if(map[x][y] == 'S'){
                     start = new Node(x, y);
                 }
@@ -76,13 +69,9 @@ public class Main {
                 dist[x][y] = new Dist(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
             }
         }
+
         dijkstra(start, dist, map);
 
-
-        for(Dist[] d : dist){
-            System.out.println(Arrays.toString(d));
-        }
-        
         System.out.println(dist[flower.x][flower.y].garbage + " " + dist[flower.x][flower.y].garbageSide);
     }
     
@@ -106,18 +95,20 @@ public class Main {
                 Dist nextDist = dist[next.x][next.y];
 
                 int garbage = 0;
+                int garbageSide = 0;
                 if(map[next.x][next.y] == 'g'){
                     garbage++;
                 }
-
-                int garbageSide = 0;
-                for(int j=0; j<4; j++){
-                    Node side = new Node(next.x + dx[j], next.y + dy[j]);
-                    if(isOutIndex(side.x, side.y)){
-                        continue;
-                    }
-                    if(map[side.x][side.y] == 'g'){
-                        garbageSide++;
+                if(map[next.x][next.y] == '.'){
+                    for(int j=0; j<4; j++){
+                        Node side = new Node(next.x + dx[j], next.y + dy[j]);
+                        if(isOutIndex(side.x, side.y)){
+                            continue;
+                        }
+                        if(map[side.x][side.y] == 'g'){
+                            garbageSide++;
+                            break;
+                        }
                     }
                 }
 
@@ -125,25 +116,23 @@ public class Main {
                 int newGarbage = curDist.garbage + garbage;
                 int newGarbageSide = curDist.garbageSide + garbageSide;
 
-                if(newGarbage < nextDist.garbage){
-                    nextDist.path = newPath;
-                    nextDist.garbage = newGarbage;
-                    nextDist.garbageSide = newGarbageSide;
-                    queue.offer(next);
-                    continue;
+                // 우선순위대로 결정
+                if(newGarbage <= nextDist.garbage){
+                    if(newGarbage < nextDist.garbage){
+                        nextDist.path = newPath;
+                        nextDist.garbage = newGarbage;
+                        nextDist.garbageSide = newGarbageSide;
+                        queue.offer(next);
+                    }
+                    else{
+                        if(newGarbageSide < nextDist.garbageSide){
+                            nextDist.path = newPath;
+                            nextDist.garbage = newGarbage;
+                            nextDist.garbageSide = newGarbageSide;
+                            queue.offer(next);
+                        }
+                    }
                 }
-                // if(newGarbageSide < nextDist.garbageSide){
-                //     nextDist.path = newPath;
-                //     nextDist.garbageSide = newGarbageSide;
-                //     queue.offer(next);
-                //     continue;
-                // }
-                // if(newPath < nextDist.path){
-                //     nextDist.path = newPath;
-                //     queue.offer(next);
-                //     continue;
-                // }
-            
             }
         }
     }
@@ -154,5 +143,34 @@ public class Main {
         }
         return false;
     }
-
 }
+
+
+/**
+ * ================================================================================
+ * 링크 : https://www.acmicpc.net/problem/1445
+ * 날짜 : 220315
+ * 성공여부 : 실패 (1시간초과)
+ * 풀이시간 : 오래걸림
+ * 
+ * 시간복잡도 : 
+ * 메모리 : 23536 KB
+ * 소요 시간 : 200 ms
+ * ================================================================================
+ * 
+ * 가중치 기준이 2개인 다익스트라 문제
+ * 
+ * 평범한 다익스트라 문제는 가중치가 최단경로 하나만 있기에 경로만 누적하면 되지만
+ * 이 문제는 두가지 가중치를 누적해야 했다. 게다가 두 가중치에 우선순위가 있음..;
+ * 
+ * 따라서 평소에 최단경로만 업데이트시키는 dist 배열에 여러 가중치를 담는 객체를 넣어줌
+ * (처음엔 경로까지 비교해야하는건줄 알고 세개를 담았는데.. 경로는 필요없었음)
+ * 
+ * 그렇게 다익스트라를 돌리려 했는데, 일단 우선순위큐를 사용하지 못했다. 
+ * 보통 우선순위큐에 효율적인 간선 순서대로 담기는데, 이번엔 Node 클래스에까지 우선순위를 구현해야 해서 걍 안했다.
+ * 
+ * 다음 정점의 가중치(쓰레기 밟기랑 옆 지나가기) 구하는 것은 걍 빡구현이였고
+ * 제일 어려웠던것은 dist 배열을 우선순위대로 업데이트 시키는 것이였음
+ * 여기서 뇌정지가 와서 삽질하다가 어찌저찌 스스로 풀긴했는데 업데이트 로직이 뭔가 완벽히 이해되진 않아서 찝찝함
+ * 
+ */
