@@ -1,18 +1,15 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 class Main {
 
     private static int[] moveHeight = {-1, 1, 0, 0};
     private static int[] moveWidth = {0, 0, -1, 1};
     private static int[][] map;
+    private static int[][] dp;
     private static int height;
     private static int width;
-    private static int answer;
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
@@ -20,75 +17,44 @@ class Main {
         height = Integer.parseInt(input[0]);
         width = Integer.parseInt(input[1]);
         map = new int[height][width];
+        dp = new int[height][width];
 
         for (int i = 0; i < height; i++) {
             input = bufferedReader.readLine().split(" ");
             for (int j = 0; j < width; j++) {
                 map[i][j] = Integer.parseInt(input[j]);
+                dp[i][j] = -1;
             }
         }
 
-        answer = 0;
-        Location startLocation = new Location(0, 0);
-
-        ArrayList<Location> visited = new ArrayList<>();
-        visited.add(startLocation);
-        dfs(startLocation, visited);
+        int answer = dfs(0, 0);
         System.out.println(answer);
+
     }
 
-    public static void dfs(Location startLocation, List<Location> visited) {
-        if (startLocation.y == height - 1 && startLocation.x == width - 1) {
-            answer++;
+    public static int dfs(int i, int j) {
+        if (i == height - 1 && j == width - 1) {
+            return 1;
         }
 
-        for (int i = 0; i < 4; i++) {
-            int nextY = startLocation.y + moveHeight[i];
-            int nextX = startLocation.x + moveWidth[i];
-            Location nextLocation = new Location(nextY, nextX);
+        if (dp[i][j] != -1) {
+            return dp[i][j];
+        }
 
-            if (nextX < 0 || nextY < 0 || nextY >= height || nextX >= width) {
+        dp[i][j] = 0;
+        for (int move = 0; move < 4; move++) {
+            int nextI = i + moveHeight[move];
+            int nextJ = j + moveWidth[move];
+
+            if (nextI < 0 || nextJ < 0 || nextI >= height || nextJ >= width) {
                 continue;
             }
 
-            if (visited.contains(nextLocation)) {
-                continue;
-            }
-
-            if (map[nextY][nextX] < map[startLocation.y][startLocation.x]) {
-                ArrayList<Location> nextVisited = new ArrayList<>();
-                nextVisited.addAll(visited);
-                nextVisited.add(nextLocation);
-                dfs(nextLocation, visited);
+            if (map[nextI][nextJ] < map[i][j]) {
+                dp[i][j] += dfs(nextI, nextJ);
             }
         }
-    }
 
-    static class Location {
-
-        int y;
-        int x;
-
-        public Location(int y, int x) {
-            this.y = y;
-            this.x = x;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            Location location = (Location) o;
-            return y == location.y && x == location.x;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(y, x);
-        }
+        return dp[i][j];
     }
 }
