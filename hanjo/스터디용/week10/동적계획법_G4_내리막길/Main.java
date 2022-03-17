@@ -46,7 +46,7 @@ public class Main {
         }
 
         if(dp[x][y] == -1){
-            dp[x][y] = 0;
+            dp[x][y] = 0;   // 일단 밟음
             for(int i=0; i<4; i++){
                 int nextX = x + dx[i];
                 int nextY = y + dy[i];
