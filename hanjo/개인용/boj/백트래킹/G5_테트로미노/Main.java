@@ -1,4 +1,4 @@
-package 완전탐색.G5_테트로미노;
+package 백트래킹.G5_테트로미노;
 
 import java.io.*;
 import java.util.*;
