@@ -13,6 +13,17 @@
 
 ***
 
+## 2022 03/14 ~ 03/17
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [2240](https://www.acmicpc.net/problem/2240) | [자두나무](https://www.acmicpc.net/problem/2240) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [1520](https://www.acmicpc.net/problem/1520) | [내리막길](https://www.acmicpc.net/problem/1520) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [1445](https://www.acmicpc.net/problem/1445) | [일요일 아침의 데이트](https://www.acmicpc.net/problem/1445) |
+
+
+
+<br> <br> <br>
+
 ## 2022 03/10 ~ 03/14
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
@@ -92,7 +103,7 @@
 #### 추가 문제
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
-| `Level 1` | [2020 KAKAO 인턴십 1번](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
+| ![](jcu011/resources/level-1.png) | [2020 KAKAO 인턴십 1번](https://programmers.co.kr/learn/courses/30/lessons/67256) | [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17281](https://www.acmicpc.net/problem/17281) | [⚾](https://www.acmicpc.net/problem/17281) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17845](https://www.acmicpc.net/problem/17845) | [수강 과목](https://www.acmicpc.net/problem/17845) |
 

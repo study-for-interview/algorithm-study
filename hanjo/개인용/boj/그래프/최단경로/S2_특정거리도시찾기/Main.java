@@ -31,15 +31,14 @@ public class Main {
         // 모든 인덱스는 정점에 맞춰 1부터 시작함
 
         // 인접리스트 생성
-        ArrayList<Integer>[] edgeList = new ArrayList[n+1];
-        edgeList[0] = new ArrayList<>();
-        for (int i = 1; i < n+1; i++) {
-            edgeList[i] = new ArrayList<>();
+        HashMap<Integer, ArrayList<Integer>> edgeList = new HashMap<>();
+        for(int i = 1; i < n+1; i++){
+            edgeList.put(i, new ArrayList<>());
         }
         for (int i = 0; i < m; i++) {
             int from = edges[i][0];
             int to = edges[i][1];
-            edgeList[from].add(to);
+            edgeList.get(from).add(to);
         }
 
         // 정점 정보 초기화
@@ -60,7 +59,7 @@ public class Main {
         while(!queue.isEmpty()){
             int curV = queue.poll();
 
-            for(int nextV : edgeList[curV]){
+            for(int nextV : edgeList.get(curV)){
                 if(vertexInfo[nextV][1] == 0 && vertexInfo[nextV][0] >= vertexInfo[curV][0] ){
                     queue.offer(nextV);
                     // 방문표시
