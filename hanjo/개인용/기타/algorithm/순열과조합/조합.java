@@ -29,7 +29,7 @@ public class 조합 {
             visited[i] = true;
             backtracking(arr, visited, i + 1, n, r - 1);
             visited[i] = false; 
-        }
+        }  
     }
 
     // 재귀 사용
