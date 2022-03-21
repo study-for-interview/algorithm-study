@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Main {
 
-    private static List<String> aeiou;
     private static int alphabetQuantity;
     private static int passwordLength;
     private static String[] alpha;
@@ -24,12 +23,6 @@ public class Main {
         Arrays.sort(alpha, Comparator.naturalOrder());
 
         visited = new boolean[alphabetQuantity];
-        aeiou = new ArrayList<>();
-        aeiou.add("a");
-        aeiou.add("e");
-        aeiou.add("i");
-        aeiou.add("o");
-        aeiou.add("u");
 
         makeString(0, new StringBuilder(), 0);
     }
