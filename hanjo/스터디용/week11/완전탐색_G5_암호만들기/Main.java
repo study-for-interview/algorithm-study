@@ -35,14 +35,15 @@ public class Main {
         Arrays.sort(arr);
         
         comb = new ArrayList<>();
-        combination(0, "", 0, 0);
+        reculsive(0, "", 0, 0);
 
         for(String str : comb){
             System.out.println(str);
         }
     }
 
-    public static void combination(int cur, String str, int vowel, int consonant){        
+    // 일반 재귀
+    public static void reculsive(int cur, String str, int vowel, int consonant){        
         if(str.length() == L){
             if(vowel == 1 && consonant == 2){
                 comb.add(str);
@@ -54,7 +55,7 @@ public class Main {
         }
 
         // 건너뛰기
-        combination(cur+1, str, vowel, consonant);
+        reculsive(cur+1, str, vowel, consonant);
         
         // 추가하기
         if(isVowel(strings[cur])){
@@ -67,7 +68,7 @@ public class Main {
                 consonant++;
             }
         }
-        combination(cur+1, str + strings[cur], vowel, consonant);
+        reculsive(cur+1, str + strings[cur], vowel, consonant);
     }
 
     public static boolean isVowel(String str){
@@ -93,6 +94,7 @@ public class Main {
  * 
  * 단순 dfs 완전탐색 조합 문제
  * 일반 조합과 차이점은 조합시 조건이 붙어있다는 점밖에 없고 동작원리는 똑같다.
+ * 백트래킹말고 일반 재귀방식이 편해서 그냥 풀었는데, 백트래킹도 해봐야함..
  * 
  * 근데 자음도 2개이상이어야 한다는 조건을 못봐서 삽질했음. 문제 제대로 읽자
  * 
