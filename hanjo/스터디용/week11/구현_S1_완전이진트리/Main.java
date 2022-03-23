@@ -1,4 +1,4 @@
-package week11;
+package week11.구현_S1_완전이진트리;
 
 import java.io.*;
 import java.util.*;
