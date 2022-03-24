@@ -23,6 +23,8 @@
 |W11D1|동적계획법|S1_RGB거리|https://www.acmicpc.net/problem/1149|
 |W11D4|완전탐색|S5_셀프넘버|https://www.acmicpc.net/problem/4673|
 |W12D4|카카오|L1_신고결과받기|https://programmers.co.kr/learn/courses/30/lessons/92334|
+|W12D4|카카오|L1_신규아이디추천|https://programmers.co.kr/learn/courses/30/lessons/81301|
+|W12D4|카카오|L1_키패드누르기|https://programmers.co.kr/learn/courses/30/lessons/67256|
 
 <br>
 
