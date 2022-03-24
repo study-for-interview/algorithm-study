@@ -17,6 +17,10 @@ public class Solution {
         // dfs
         dfs(START, graph, new LinkedList<>());
 
+        for(var r : routes){
+            System.out.println(r);
+        }
+
         // 문자열 정렬
         Collections.sort(routes, (List<String> r1, List<String> r2) -> {
             for(int i=0; i< r1.size(); i++){
