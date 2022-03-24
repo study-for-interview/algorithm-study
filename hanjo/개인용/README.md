@@ -21,6 +21,7 @@
 |W10D4|백트래킹|G5_테트로미노|https://www.acmicpc.net/problem/14500|
 |W10D4|구현|S3_수이어쓰기1|https://www.acmicpc.net/problem/1748|
 |W11D1|동적계획법|S1_RGB거리|https://www.acmicpc.net/problem/1149|
+|W11D4|완전탐색|S5_셀프넘버|https://www.acmicpc.net/problem/4673|
 
 <br>
 
