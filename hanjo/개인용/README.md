@@ -22,6 +22,9 @@
 |W10D4|구현|S3_수이어쓰기1|https://www.acmicpc.net/problem/1748|
 |W11D1|동적계획법|S1_RGB거리|https://www.acmicpc.net/problem/1149|
 |W11D4|완전탐색|S5_셀프넘버|https://www.acmicpc.net/problem/4673|
+|W12D4|카카오|L1_신고결과받기|https://programmers.co.kr/learn/courses/30/lessons/92334|
+|W12D4|카카오|L1_신규아이디추천|https://programmers.co.kr/learn/courses/30/lessons/81301|
+|W12D4|카카오|L1_키패드누르기|https://programmers.co.kr/learn/courses/30/lessons/67256|
 
 <br>
 
@@ -83,5 +86,4 @@
 |동적계획법|L3_도둑질|https://programmers.co.kr/learn/courses/30/lessons/42897|
 |탐욕법|L2_조이스틱|https://programmers.co.kr/learn/courses/30/lessons/42860|
 |그래프-탐색|L3_네트워크|https://programmers.co.kr/learn/courses/30/lessons/43162|
-|그래프-탐색|L3_여행경로|https://www.acmicpc.net/problem/1261|
 |카카오|L2_순위검색|https://programmers.co.kr/learn/courses/30/lessons/72412|
