@@ -1,4 +1,4 @@
-package week12._G5_줄어들지않아;
+package week12.동적계획법_G5_줄어들지않아;
 
 import java.io.*;
 
