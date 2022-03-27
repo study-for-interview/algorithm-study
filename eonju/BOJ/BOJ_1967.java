@@ -2,87 +2,67 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.PriorityQueue;
 
 class Main {
 
-    private static int nodeQuantity;
-    private static HashMap<Integer, List<Edge>> tree;
-    private static int[] dist;
+    private static int N;
+    private static HashMap<Integer, List<Edge>> nodes;
+    private static boolean[] visited;
+    private static int maxIdx;
+    private static int maxValue;
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        nodeQuantity = Integer.parseInt(bufferedReader.readLine());
 
-        tree = new HashMap<>();
-        for (int i = 1; i <= nodeQuantity; i++) {
-            tree.put(i, new ArrayList<>());
+        N = Integer.parseInt(bufferedReader.readLine());
+        nodes = new HashMap<>();
+
+        for (int i = 1; i <= N; i++) {
+            nodes.put(i, new ArrayList<>());
         }
 
-        for (int i = 0; i < nodeQuantity - 1; i++) {
+        for (int i = 0; i < N - 1; i++) {
             String[] input = bufferedReader.readLine().split(" ");
+
             int nodeA = Integer.parseInt(input[0]);
             int nodeB = Integer.parseInt(input[1]);
             int weight = Integer.parseInt(input[2]);
 
-            tree.get(nodeA).add(new Edge(nodeB, weight));
-            tree.get(nodeB).add(new Edge(nodeA, weight));
+            nodes.get(nodeA).add(new Edge(nodeB, weight));
+            nodes.get(nodeB).add(new Edge(nodeA, weight));
         }
 
-        int max = 0;
-        int idx = 0;
-        dist = new int[nodeQuantity + 1];
+        visited = new boolean[N + 1];
+        visited[1] = true;
+        maxIdx = 1;
+        maxValue = 0;
+        dfs(1, 0);
 
-        dijkstra(1);
-        for (int i = 1; i < dist.length; i++) {
-            if (max < dist[i]) {
-                max = dist[i];
-                idx = i;
-            }
-        }
+        visited = new boolean[N + 1];
+        visited[maxIdx] = true;
+        maxValue = 0;
+        dfs(maxIdx, 0);
 
-        max = 0;
-
-        dijkstra(idx);
-        for (int i = 1; i < dist.length; i++) {
-            if (max < dist[i]) {
-                max = dist[i];
-            }
-        }
-
-        System.out.println(max);
+        System.out.println(maxValue);
     }
 
-    public static void dijkstra(int start) {
-        Arrays.fill(dist, Integer.MAX_VALUE);
+    public static void dfs(int start, int sum) {
+        List<Edge> edges = nodes.get(start);
 
-        PriorityQueue<Edge> queue = new PriorityQueue<>(Comparator.comparingInt(edge -> edge.weight));
-        queue.add(new Edge(start, 0));
-        dist[start] = 0;
+        if (maxValue < sum) {
+            maxValue = sum;
+            maxIdx = start;
+        }
 
-        while (!queue.isEmpty()) {
-            Edge poll = queue.poll();
-
-            if (poll.weight > dist[poll.end]) {
-                continue;
-            }
-
-            List<Edge> edges = tree.get(poll.end);
-            if (edges.isEmpty()) {
-                continue;
-            }
-
-            for (Edge edge : edges) {
-                if (edge.weight + poll.weight < dist[edge.end]) {
-                    dist[edge.end] = edge.weight + poll.weight;
-                    queue.add(new Edge(edge.end, dist[edge.end]));
-                }
+        for (Edge edge : edges) {
+            if (!visited[edge.end]) {
+                visited[edge.end] = true;
+                dfs(edge.end, sum + edge.weight);
             }
         }
+
     }
 
     static class Edge {
