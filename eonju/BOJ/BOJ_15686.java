@@ -1,93 +1,71 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.StringTokenizer;
 
 public class Main {
 
-    private static int size = 0;
-    private static int quantity = 0;
-    private static List<Location> chickenHouses;
-    private static List<Location> houses;
-    private static boolean[] visited;
-    private static int min;
+    static int size, quantity;
+    static ArrayList<Location> houses;
+    static ArrayList<Location> chickenHouses;
+    static int answer;
+    static boolean[] open;
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        String[] input = bufferedReader.readLine().split(" ");
-
-        size = Integer.parseInt(input[0]);
-        quantity = Integer.parseInt(input[1]);
-        chickenHouses = new ArrayList<>();
+        size = Integer.parseInt(st.nextToken());
+        quantity = Integer.parseInt(st.nextToken());
         houses = new ArrayList<>();
+        chickenHouses = new ArrayList<>();
 
         for (int i = 0; i < size; i++) {
-            input = bufferedReader.readLine().split(" ");
-
+            st = new StringTokenizer(br.readLine());
             for (int j = 0; j < size; j++) {
-                if (input[j].equals("1")) {
+                String input = st.nextToken();
+
+                if (input.equals("1")) {
                     houses.add(new Location(i, j));
                     continue;
                 }
-
-                if (input[j].equals("2")) {
+                if (input.equals("2")) {
                     chickenHouses.add(new Location(i, j));
                 }
             }
         }
 
-        min = Integer.MAX_VALUE;
-        visited = new boolean[chickenHouses.size()];
-        int[] dist = new int[houses.size()];
-        Arrays.fill(dist, Integer.MAX_VALUE);
+        answer = Integer.MAX_VALUE;
+        open = new boolean[chickenHouses.size()];
 
-        int answer = solve(0, dist);
-
+        solve(0, 0);
         System.out.println(answer);
     }
 
-    public static int solve(int depth, int[] dist) {
-        if (depth == quantity) {
-            int sum = 0;
+    public static void solve(int start, int cnt) {
+        if (cnt == quantity) {
+            int res = 0;
 
-            for (int i = 0; i < dist.length; i++) {
-                sum += dist[i];
-            }
+            for (int i = 0; i < houses.size(); i++) {
+                int temp = Integer.MAX_VALUE;
 
-            return sum;
-        }
-
-        for (int i = 0; i < chickenHouses.size(); i++) {
-
-            Location chickenHouse = chickenHouses.get(i);
-
-            if (!visited[i]) {
-                visited[i] = true;
-
-                int[] temp = new int[houses.size()];
-                for (int j = 0; j < dist.length; j++) {
-                    temp[j] = dist[j];
-                }
-
-                for (int j = 0; j < houses.size(); j++) {
-                    Location house = houses.get(j);
-                    int distance = getDistance(chickenHouse, house);
-
-                    if (temp[j] > distance) {
-                        temp[j] = distance;
+                for (int j = 0; j < chickenHouses.size(); j++) {
+                    if (open[j]) {
+                        int distance = getDistance(houses.get(i), chickenHouses.get(j));
+                        temp = Math.min(temp, distance);
                     }
                 }
-
-                min = Math.min(solve(depth + 1, temp), min);
-
-                visited[i] = false;
+                res += temp;
             }
+            answer = Math.min(answer, res);
+            return;
         }
 
-        return min;
+        for (int i = start; i < chickenHouses.size(); i++) {
+            open[i] = true;
+            solve(i + 1, cnt + 1);
+            open[i] = false;
+        }
     }
 
     public static int getDistance(Location chickenHouse, Location house) {
@@ -99,7 +77,7 @@ public class Main {
         int x;
         int y;
 
-        public Location(int x, int y) {
+        Location(int x, int y) {
             this.x = x;
             this.y = y;
         }
