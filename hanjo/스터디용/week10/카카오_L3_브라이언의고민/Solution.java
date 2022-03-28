@@ -1,4 +1,4 @@
-package week10.카카오_3_브라이언의고민;
+package week10.카카오_L3_브라이언의고민;
 
 import java.util.*;
 
