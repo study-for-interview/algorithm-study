@@ -1,6 +1,6 @@
 package 완전탐색.S5_셀프넘버;
 
-public class Try1 {
+public class Main2 {
 
     public static final int MAX = 10_000;
 
