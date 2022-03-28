@@ -3,7 +3,7 @@ using namespace std;
 
 int N,M;
 int m[21][301]{};
-int dp[21][301]{};
+int dp[21][301]{}; // dp[M][N] : 1~M까지 기업을 활용하고 총N만원을 이용하여 얻을 수 있는 최대이익
 int ord[21][301]{};
 
 int main() {
@@ -35,7 +35,7 @@ int main() {
     int now = M;
     int cost = N;
     vector<int> ans;
-    while(now > 0) {
+    while(now>0) {
         int amount = ord[now][cost];
         ans.push_back(amount);
         cost -= amount;
