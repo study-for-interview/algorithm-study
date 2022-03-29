@@ -55,11 +55,13 @@ public class Main {
                     }
                 }
             }
+
             // 모든 조합 찾기
             size = candidates.size();
             isVisited = new boolean[size];
             combs = new ArrayList<>();
             combination(0, 0);
+            
             // 조합을 순회
             int min = Integer.MAX_VALUE;
             for(var comb : combs){
