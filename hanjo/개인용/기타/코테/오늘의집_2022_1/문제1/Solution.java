@@ -35,7 +35,6 @@ public class Solution {
                 if(cur == nextPoint){
                     isCoupled[i][j] = true;
                 }
-
             }
         }
         return count;
