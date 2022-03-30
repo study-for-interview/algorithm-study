@@ -25,6 +25,12 @@
 |W12D4|카카오|L1_신고결과받기|https://programmers.co.kr/learn/courses/30/lessons/92334|
 |W12D4|카카오|L1_신규아이디추천|https://programmers.co.kr/learn/courses/30/lessons/81301|
 |W12D4|카카오|L1_키패드누르기|https://programmers.co.kr/learn/courses/30/lessons/67256|
+|W13D3|완전탐색|S4_괄호|https://www.acmicpc.net/problem/9012|
+|W13D3|동적계획법|S3_123더하기|https://www.acmicpc.net/problem/9095|
+|W13D3|완전탐색|S4_한수|https://www.acmicpc.net/problem/1065|
+|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
+
+
 
 <br>
 
@@ -45,7 +51,6 @@
 |동적계획법|G4_수강과목|https://www.acmicpc.net/problem/17845|
 |탐욕법|G5_강의실||https://www.acmicpc.net/problem/1374
 |백트래킹|S3_근손실|https://www.acmicpc.net/problem/18429|
-|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
 |백트래킹|G5_연구소2|https://www.acmicpc.net/problem/17141|
 |백트래킹|G4_선발명단|https://www.acmicpc.net/problem/3980|
 |백트래킹|G5_애너그램|https://www.acmicpc.net/problem/6443|
