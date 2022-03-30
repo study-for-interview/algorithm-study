@@ -54,21 +54,22 @@ public class Main {
 
             for(int x=0; x<4; x++){
                 for(int y=0; y<4; y++){
-                    if(map[x][y].num == -1){
-                        Fish shark = map[x][y];
-                        for(int i=1; i<=3; i++){
-                            int nextX = x + dx[shark.dir]*i;
-                            int nextY = y + dy[shark.dir]*i;
-                            if(isOut(nextX, nextY) || map[nextX][nextY].num == 0){
-                                continue;
-                            }
-                            int nextNum = map[nextX][nextY].num;
-                            shark.num = 0;
-                            map[nextX][nextY].num = -1;
-                            dfs(map, sum + nextNum);
-                            shark.num = -1;
-                            map[nextX][nextY].num = nextNum;
+                    if(map[x][y].num != -1){
+                        continue;
+                    }
+                    Fish shark = map[x][y];
+                    for(int i=1; i<=3; i++){
+                        int nextX = x + dx[shark.dir]*i;
+                        int nextY = y + dy[shark.dir]*i;
+                        if(isOut(nextX, nextY) || map[nextX][nextY].num == 0){
+                            continue;
                         }
+                        int nextNum = map[nextX][nextY].num;
+                        shark.num = 0;
+                        map[nextX][nextY].num = -1;
+                        dfs(map, sum + nextNum);
+                        shark.num = -1;
+                        map[nextX][nextY].num = nextNum;
                     }
                 }
             }
@@ -81,18 +82,19 @@ public class Main {
                 for(int x=0; x<4; x++){
                     for(int y=0; y<4; y++){
                         Fish cur = map[x][y];
-                        if(cur.num == num){
-                            for(int i=0; i<8; i++){
-                                int dir = (cur.dir + i) % 8;
-                                int nextX = x + dx[dir];
-                                int nextY = y + dy[dir];
-                                if(isOut(nextX, nextY) || map[nextX][nextY].num == -1){
-                                    continue;
-                                }
-                                cur.dir = dir;
-                                swap(map, x, y, nextX, nextY);
-                                continue Loop;
+                        if(cur.num != num){
+                            continue;
+                        }
+                        for(int i=0; i<8; i++){
+                            int dir = (cur.dir + i) % 8;
+                            int nextX = x + dx[dir];
+                            int nextY = y + dy[dir];
+                            if(isOut(nextX, nextY) || map[nextX][nextY].num == -1){
+                                continue;
                             }
+                            cur.dir = dir;
+                            swap(map, x, y, nextX, nextY);
+                            continue Loop;
                         }
                     }
                 }
