@@ -28,9 +28,7 @@
 |W13D3|완전탐색|S4_괄호|https://www.acmicpc.net/problem/9012|
 |W13D3|동적계획법|S3_123더하기|https://www.acmicpc.net/problem/9095|
 |W13D3|완전탐색|S4_한수|https://www.acmicpc.net/problem/1065|
-|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
-
-
+|W13D3|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
 
 <br>
 
@@ -91,4 +89,3 @@
 |동적계획법|L3_도둑질|https://programmers.co.kr/learn/courses/30/lessons/42897|
 |탐욕법|L2_조이스틱|https://programmers.co.kr/learn/courses/30/lessons/42860|
 |그래프-탐색|L3_네트워크|https://programmers.co.kr/learn/courses/30/lessons/43162|
-|카카오|L2_순위검색|https://programmers.co.kr/learn/courses/30/lessons/72412|
