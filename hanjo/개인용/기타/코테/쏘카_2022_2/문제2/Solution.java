@@ -1,66 +1,77 @@
 package 코테.쏘카_2022_2.문제2;
 
-class Solution {
+import java.util.*;
 
-    public int min = Integer.MAX_VALUE;
-    public int[] numbers;
-    public int N;
+public class Solution {
+
     public int K;
+    public int[] numbers;
+    public int size;
+    public List<List<Integer>> perms;
+    public boolean[] isVisited;
 
     public int solution(int[] numbers, int K) {
-        this.numbers = numbers;
         this.K = K;
-        this.N = numbers.length;
+        this.numbers = numbers;
+        this.size = numbers.length;
 
-        dfs(1);
+        // 조건 만족하는 후보 순열 구하기
+        perms =  new ArrayList<>();
+        isVisited = new boolean[size];
+        permutation(0, new ArrayList<>());
 
-        if(min == Integer.MAX_VALUE){
-            return -1;
+        // 후보 순회하면서 최소 변경 횟수 구하기
+        int min = Integer.MAX_VALUE;
+        for(var perm : perms){
+            int count = 0;
+            for(int i=0; i<size; i++){
+                if(i != perm.get(i)){
+                    Collections.swap(perm, i, perm.indexOf(i));
+                    count++;
+                }
+            }
+            min = Math.min(min, count);
         }
-        return min-1;
+
+        return min;
     }
 
-    public void dfs(int window){
-
-        if(window == N){
+    public void permutation(int depth, List<Integer> perm){
+        
+        if(depth == size){
+            for(int i=0; i<size-1; i++){
+                int diff = Math.abs(numbers[perm.get(i)] - numbers[perm.get(i+1)]);
+                if(diff > K){
+                    return;
+                }
+            }
+            perms.add(perm);
             return;
         }
-        if(isValid()){
-            min = Math.min(min, window);
-            return;
-        }
-
-        // window(2칸) 요소를 번갈아 탐색 
-        for(int j=window+1; j<N; j++){
-            if(Math.abs(numbers[window-1]-numbers[j]) <= K){
-                swap(window, j);
-                dfs(window+1);
-                swap(window, j);    // 백트래킹
-            }
-        }
-        for(int j=window+1; j<N; j++){
-            if(Math.abs(numbers[window]-numbers[j]) <= K){
-                swap(window-1, j);
-                dfs(window+1);
-                swap(window-1, j);
+        
+        for(int i=0; i<size; i++){
+            if(!isVisited[i]){
+                // 백트래킹으로 찾기
+                isVisited[i] = true;
+                List<Integer> next = new ArrayList<>(perm);
+                next.add(i);
+                permutation(depth+1, next);
+                isVisited[i] = false;
             }
         }
     }
 
-    public void swap(int x, int y){
-        int temp = numbers[x];
-        numbers[x] = numbers[y];
-        numbers[y] = temp;
+    public static void main(String[] args){
+        // 1
+        System.out.println(new Solution().solution(
+            new int[]{10, 40, 30, 20},
+            20
+        ));
+        // 2
+        System.out.println(new Solution().solution(
+            new int[]{3, 7, 2, 8, 6, 4, 5, 1},
+            3
+        ));
     }
-
-    public boolean isValid(){
-        for(int i=0; i<N-1; i++){
-            if(Math.abs(numbers[i] - numbers[i+1]) > K){
-                return false;
-            }
-        }
-        return true;
-    }
+    
 }
-
-// 62.5 
