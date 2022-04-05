@@ -37,7 +37,6 @@
 |카테고리|제목|링크|
 |---|---|---|
 |동적계획법|G4_RGB거리2|https://www.acmicpc.net/problem/17404|
-|동적계획법|S3_123더하기|https://www.acmicpc.net/problem/9095|
 |동적계획법|S1_123더하기4|https://www.acmicpc.net/problem/15989|
 |동적계획법|S1_123더하기7|https://www.acmicpc.net/problem/15992|
 |동적계획법|G5_알약|https://www.acmicpc.net/problem/4811|
