@@ -1,74 +1,86 @@
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
-class Main {
+public class Main {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String[] input = bufferedReader.readLine().split(" ");
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int cityQuantity = Integer.parseInt(input[0]);
-        int maxWeight = Integer.parseInt(input[1]);
-        int boxQuantity = Integer.parseInt(bufferedReader.readLine());
+        int cityQuantity = Integer.parseInt(st.nextToken());
+        int maxWeight = Integer.parseInt(st.nextToken());
+        int boxQuantity = Integer.parseInt(br.readLine());
 
-        int[] city = new int[cityQuantity + 1];
-        PriorityQueue<Box> queue = new PriorityQueue<>(Comparator.comparingInt(x -> x.diff));
+        Box[] deliveries = new Box[boxQuantity + 1];
+        for (int i = 1; i <= boxQuantity; i++) {
+            st = new StringTokenizer(br.readLine());
+            int start = Integer.parseInt(st.nextToken());
+            int end = Integer.parseInt(st.nextToken());
+            int weight = Integer.parseInt(st.nextToken());
 
-        for (int i = 0; i < boxQuantity; i++) {
-            input = bufferedReader.readLine().split(" ");
-            int start = Integer.parseInt(input[0]);
-            int end = Integer.parseInt(input[1]);
-            int weight = Integer.parseInt(input[2]);
-
-            queue.add(new Box(start, end, weight));
+            deliveries[i] = new Box(start, end, weight);
         }
 
-        while (!queue.isEmpty()) {
-            Box poll = queue.poll();
+        Arrays.sort(deliveries, 1, boxQuantity + 1);
 
-            if (poll.diff == 1) {
-                if (poll.weight <= maxWeight) {
-                    city[poll.end] = poll.weight;
-                } else {
-                    city[poll.end] = maxWeight;
+        int[] weight = new int[cityQuantity + 1];
+        for (int i = 1; i < cityQuantity; i++) {
+            weight[i] = maxWeight;
+        }
+
+        int ans = 0;
+        for (int i = 1; i <= boxQuantity; i++) {
+            Box d = deliveries[i];
+
+            int maxBoxNum = Integer.MAX_VALUE;
+
+            for (int j = d.start; j < d.end; j++) {
+                maxBoxNum = Math.min(maxBoxNum, weight[j]);
+            }
+
+            if (maxBoxNum >= d.weight) {
+                for (int j = d.start; j < d.end; j++) {
+                    weight[j] -= d.weight;
                 }
-
-                continue;
-            }
-
-            int sum = 0;
-            for (int i = poll.start + 1; i <= poll.end; i++) {
-                sum = sum + city[i];
-            }
-
-            if (sum < maxWeight) {
-                city[poll.end] = city[poll.end] + (maxWeight - sum);
+                ans += d.weight;
+            } else {
+                for (int j = d.start; j < d.end; j++) {
+                    weight[j] -= maxBoxNum;
+                }
+                ans += maxBoxNum;
             }
         }
 
-        int answer = 0;
-        for (int i = 2; i < city.length; i++) {
-            answer = answer + city[i];
-        }
-
-        System.out.println(answer);
+        bw.write(ans + "\n");
+        bw.flush();
+        bw.close();
+        br.close();
     }
 
-    static class Box {
+    static class Box implements Comparable<Box> {
 
         int start;
         int end;
-        int diff;
         int weight;
 
-        public Box(int start, int end, int weight) {
+        Box(int start, int end, int weight) {
             this.start = start;
             this.end = end;
-            this.diff = end - start;
             this.weight = weight;
         }
+
+        @Override
+        public int compareTo(Box arg0) {
+            if (end == arg0.end) {
+                return start - arg0.start;
+            }
+            return end - arg0.end;
+        }
     }
+
 }
