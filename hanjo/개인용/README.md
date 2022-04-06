@@ -29,6 +29,8 @@
 |W13D3|동적계획법|S3_123더하기|https://www.acmicpc.net/problem/9095|
 |W13D3|완전탐색|S4_한수|https://www.acmicpc.net/problem/1065|
 |W13D3|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
+|W14D3|카카오|L1_다트게임|https://programmers.co.kr/learn/courses/30/lessons/17682|
+
 
 <br>
 

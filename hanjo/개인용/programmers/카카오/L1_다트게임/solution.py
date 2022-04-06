@@ -1,5 +1,6 @@
 def solution(dartResult):
     dartResult = dartResult.replace("10", "x")
+    print(dartResult)
     square = {"S":1, "D":2, "T":3}
     score, score_list = 0, []
     
