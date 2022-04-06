@@ -13,6 +13,30 @@
 
 ***
 
+## 2022 04/04 ~ 04/07
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [21941](https://www.acmicpc.net/problem/21941) | [문자열 제거](https://www.acmicpc.net/problem/21941) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [8980](https://www.acmicpc.net/problem/8980) | [택배](https://www.acmicpc.net/problem/8980) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [16236](https://www.acmicpc.net/problem/16236) | [아기 상어](https://www.acmicpc.net/problem/16236) |
+<details>
+<summary></summary>
+<div markdown="1">
+  
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| ![](전찬의/resources/level-4.png) | [2021 카카오 공채 7번](https://programmers.co.kr/learn/courses/30/lessons/72416) | [매출 하락 최소화](https://programmers.co.kr/learn/courses/30/lessons/72416) |
+  
+![포기하면 편해](https://t1.daumcdn.net/cfile/tistory/251CE54557BDE53E14)
+
+</div>
+</details>
+
+
+
+
+<br> <br> <br>
+
 ## 2022 03/31 ~ 04/04
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
