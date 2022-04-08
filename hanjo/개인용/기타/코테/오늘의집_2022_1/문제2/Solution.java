@@ -23,33 +23,31 @@ public class Solution {
     }
 
     public int soltuion(int[][] beds, int[][] tables, int cost){
-        System.out.println();
 
         int min = Integer.MAX_VALUE;
 
         for(int[] bed : beds){
             for(int[] table : tables){
-                int furnitureCost = bed[2] + table[2];
-
                 List<Furniture> sorted = new ArrayList<>();
                 sorted.add(new Furniture(bed[0], bed[1]));
                 sorted.add(new Furniture(table[0], table[1]));
                 Collections.sort(sorted);
 
                 int areaCost = cost * getMinArea(sorted);
-
+                int furnitureCost = bed[2] + table[2];
                 min = Math.min(min, furnitureCost + areaCost);
             }
         }
         return min;
     }
 
-    public int getMinArea(List<Furniture> furnitures){
-        Furniture f1 = furnitures.get(0);
-        Furniture f2 = furnitures.get(1);
+    public int getMinArea(List<Furniture> sorted){
+        Furniture f1 = sorted.get(0);
+        Furniture f2 = sorted.get(1);
 
         int len1 = f1.longer;
         int len2 = f1.shorter + f2.shorter;
+        
         if(f1.shorter >= f2.longer){
             len1 = f1.longer + f2.shorter;
             len2 = f1.shorter;
@@ -57,7 +55,7 @@ public class Solution {
         return len1*len2;
     }
 
-    
+
     public static void main(String[] args){
         // 420000
         System.out.println(new Solution().soltuion(
