@@ -13,12 +13,26 @@
 
 ***
 
+
+## 2022 04/11 ~ 04/14
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [7511](https://www.acmicpc.net/problem/7511) | [소셜 네트워킹 어플리케이션](https://www.acmicpc.net/problem/7511) | [Union-Find(Disjoint Set)](https://solved.ac/problems/tags/disjoint_set?sort=level&direction=asc&page=1) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [19238](https://www.acmicpc.net/problem/19238) | [스타트 택시](https://www.acmicpc.net/problem/19238) | Blind |
+| ![](전찬의/resources/level-3.png) | [2019 카카오 공채 5번](https://programmers.co.kr/learn/courses/30/lessons/42892) | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892) | Blind |
+
+
+
+
+
+<br> <br> <br>
+
 ## 2022 04/07 ~ 04/11
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [1641](https://www.acmicpc.net/problem/1461) | [도서관](https://www.acmicpc.net/problem/1461) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [21277](https://www.acmicpc.net/problem/21277) | [짠돌이 호석](https://www.acmicpc.net/problem/21277) |
-| ![](전찬의/resources/level-3.png) | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges) | [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678) |
+| ![](전찬의/resources/level-3.png) | [2018 카카오 공채](https://programmers.co.kr/learn/challenges) | [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678) |
 
 
 
