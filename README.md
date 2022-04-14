@@ -5,20 +5,50 @@
 <br>
 
 ### :running: 규칙
+* 백준 or 프로그래머스 문제 풀이
 * 스터디는 매주 2회(월요일, 목요일) 각각 3문제씩 풀이
-* 풀고싶은 문제가 있다면 깃헙 이슈에 댓글로 등록
-* 스터디 시작전까지 3문제를 풀고 저장하기 (틀린 코드라도 일단 저장)
+* 풀고싶은 문제나 공부하고 싶은 알고리즘이 있다면 깃헙 이슈에 댓글로 등록
+* 스터디 시작전까지 3문제를 풀고 코드 저장하기 (틀린 코드라도 일단 저장)
 
 <br>
 
 ***
+
+
+## 2022 04/14 ~ 04/18
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| ![](전찬의/resources/level-2.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [양궁대회](https://programmers.co.kr/learn/courses/30/lessons/92342) | Blind |
+| ![](전찬의/resources/level-2.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [k진수에서 소수 개수 구하기](https://programmers.co.kr/learn/courses/30/lessons/92335) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [19238](https://www.acmicpc.net/problem/2533) | [사회망 서비스(SNS)](https://www.acmicpc.net/problem/2533) | [트리 DP](https://solved.ac/problems/tags/dp_tree) |
+| ![](전찬의/resources/level-3.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [양과 늑대](https://programmers.co.kr/learn/courses/30/lessons/92343) | Blind |
+
+
+
+
+
+<br> <br> <br>
+
+
+## 2022 04/11 ~ 04/14
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [7511](https://www.acmicpc.net/problem/7511) | [소셜 네트워킹 어플리케이션](https://www.acmicpc.net/problem/7511) | [Union-Find(Disjoint Set)](https://solved.ac/problems/tags/disjoint_set?sort=level&direction=asc&page=1) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [19238](https://www.acmicpc.net/problem/19238) | [스타트 택시](https://www.acmicpc.net/problem/19238) | Blind |
+| ![](전찬의/resources/level-3.png) | [2019 KAKAO 공채 5번](https://programmers.co.kr/learn/courses/30/lessons/42892) | [길 찾기 게임](https://programmers.co.kr/learn/courses/30/lessons/42892) | Blind |
+
+
+
+
+
+<br> <br> <br>
 
 ## 2022 04/07 ~ 04/11
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [1641](https://www.acmicpc.net/problem/1461) | [도서관](https://www.acmicpc.net/problem/1461) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [21277](https://www.acmicpc.net/problem/21277) | [짠돌이 호석](https://www.acmicpc.net/problem/21277) |
-| ![](전찬의/resources/level-3.png) | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/challenges) | [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678) |
+| ![](전찬의/resources/level-3.png) | [2018 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678) |
 
 
 
@@ -38,7 +68,7 @@
   
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
-| ![](전찬의/resources/level-4.png) | [2021 카카오 공채 7번](https://programmers.co.kr/learn/courses/30/lessons/72416) | [매출 하락 최소화](https://programmers.co.kr/learn/courses/30/lessons/72416) |
+| ![](전찬의/resources/level-4.png) | [2021 KAKAO 공채 7번](https://programmers.co.kr/learn/courses/30/lessons/72416) | [매출 하락 최소화](https://programmers.co.kr/learn/courses/30/lessons/72416) |
   
 ![포기하면 편해](https://t1.daumcdn.net/cfile/tistory/251CE54557BDE53E14)
 
@@ -69,7 +99,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [19236](https://www.acmicpc.net/problem/19236) | [청소년 상어](https://www.acmicpc.net/problem/19236) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [16120](https://www.acmicpc.net/problem/16120) | [PPAP](https://www.acmicpc.net/problem/16120) |
-| ![](전찬의/resources/level-2.png) | [2021 카카오 공채](https://programmers.co.kr/learn/challenges) | [순위검색](https://programmers.co.kr/learn/courses/30/lessons/72412) |
+| ![](전찬의/resources/level-2.png) | [2021 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [순위검색](https://programmers.co.kr/learn/courses/30/lessons/72412) |
 
 
 
@@ -130,7 +160,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [2096](https://www.acmicpc.net/problem/2096) | [내려가기](https://www.acmicpc.net/problem/2096) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [5588](https://www.acmicpc.net/problem/5588) | [별자리 찾기](https://www.acmicpc.net/problem/5588) |
-| ![](전찬의/resources/level-3.png) | [2017 카카오 코드 예선](https://programmers.co.kr/learn/challenges) | [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830) |
+| ![](전찬의/resources/level-3.png) | [2017 KAKAO CODE 예선](https://programmers.co.kr/learn/challenges) | [브라이언의 고민](https://programmers.co.kr/learn/courses/30/lessons/1830) |
 
 
 
@@ -141,7 +171,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [4485](https://www.acmicpc.net/problem/4485 ) | [녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [1670](https://www.acmicpc.net/problem/1670 ) | [정상 회담 2](https://www.acmicpc.net/problem/1670 ) |
-| ![](전찬의/resources/level-2.png) | [2022 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/92341) | [주차 요금 계산](https://programmers.co.kr/learn/courses/30/lessons/92341) |
+| ![](전찬의/resources/level-2.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/courses/30/lessons/92341) | [주차 요금 계산](https://programmers.co.kr/learn/courses/30/lessons/92341) |
 
 
 
@@ -152,7 +182,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16234](https://www.acmicpc.net/problem/16234 ) | [인구 이동](https://www.acmicpc.net/problem/16234 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [1238](https://www.acmicpc.net/problem/1238 ) | [파티](https://www.acmicpc.net/problem/1238 ) |
-| ![](전찬의/resources/level-3.png) | [2018 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/17676) | [추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) |
+| ![](전찬의/resources/level-3.png) | [2018 KAKAO 공채](https://programmers.co.kr/learn/courses/30/lessons/17676) | [추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) |
 
 
 
@@ -199,7 +229,7 @@
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14863](https://www.acmicpc.net/problem/14863 ) | [서울에서 경산까지](https://www.acmicpc.net/problem/14863 ) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17135](https://www.acmicpc.net/problem/17135 ) | [캐슬 디펜스](https://www.acmicpc.net/problem/17135 ) |
-| ![](전찬의/resources/level-3.png) | [2020 KAKAO BLIND RECRUITMENT 3번](https://programmers.co.kr/learn/courses/30/lessons/60059) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
+| ![](전찬의/resources/level-3.png) | [2020 KAKAO 공채 3번](https://programmers.co.kr/learn/courses/30/lessons/60059) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
 
 #### 추가 문제
 | 난이도 | 문제 번호 | 문제 이름 |
@@ -217,8 +247,8 @@
 | 난이도 | 문제 번호 | 문제 이름 |
 |:------:|:----:|:---------:|
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14499](https://www.acmicpc.net/problem/14499 ) | [주사위 굴리기](https://www.acmicpc.net/problem/14499 ) |
-| ![](전찬의/resources/level-2.png) | [2020 KAKAO BLIND RECRUITMENT 1번](https://programmers.co.kr/learn/courses/30/lessons/60057) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) |
-| ![](전찬의/resources/level-2.png) | [2020 KAKAO BLIND RECRUITMENT 2번](https://programmers.co.kr/learn/courses/30/lessons/60058) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) |
+| ![](전찬의/resources/level-2.png) | [2020 KAKAO 공채 1번](https://programmers.co.kr/learn/courses/30/lessons/60057) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) |
+| ![](전찬의/resources/level-2.png) | [2020 KAKAO채공채 2번](https://programmers.co.kr/learn/courses/30/lessons/60058) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) |
 
 #### 추가 문제
 | 난이도 | 문제 번호 | 문제 이름 |
