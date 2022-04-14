@@ -1,6 +1,6 @@
+package tree;
 
 import java.util.*;
-import java.io.*;
 
 public class Pms_길찾기게임 {
     
