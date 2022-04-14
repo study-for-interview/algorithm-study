@@ -1,4 +1,4 @@
-package algorithm.순열과조합;
+package algorithm.자주쓰는거;
 
 public class 조합 {
     public static void main(String[] args) {
