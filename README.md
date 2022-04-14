@@ -15,6 +15,21 @@
 ***
 
 
+## 2022 04/14 ~ 04/18
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| ![](전찬의/resources/level-2.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [양궁대회](https://programmers.co.kr/learn/courses/30/lessons/92342) | Blind |
+| ![](전찬의/resources/level-2.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [k진수에서 소수 개수 구하기](https://programmers.co.kr/learn/courses/30/lessons/92335) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [19238](https://www.acmicpc.net/problem/2533) | [사회망 서비스(SNS)](https://www.acmicpc.net/problem/2533) | [트리 DP](https://solved.ac/problems/tags/dp_tree) |
+| ![](전찬의/resources/level-3.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [양과 늑대](https://programmers.co.kr/learn/courses/30/lessons/92343) | Blind |
+
+
+
+
+
+<br> <br> <br>
+
+
 ## 2022 04/11 ~ 04/14
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
