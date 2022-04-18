@@ -7,16 +7,23 @@ import java.util.List;
 
 class Main {
 
+    private static int N;
+    private static boolean[] visited;
+    private static HashMap<Integer, List<Integer>> tree;
+    private static int[][] dp;
+
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bufferedReader.readLine());
 
-        HashMap<Integer, List<Integer>> tree = new HashMap<>();
+        N = Integer.parseInt(bufferedReader.readLine());
+        tree = new HashMap<>();
+        visited = new boolean[N + 1];
+        dp = new int[N + 1][2];
+
         for (int i = 1; i <= N; i++) {
             tree.put(i, new ArrayList<>());
         }
 
-        int maxSize = 0;
         for (int i = 0; i < N - 1; i++) {
             String[] input = bufferedReader.readLine().split(" ");
             int nodeA = Integer.parseInt(input[0]);
@@ -24,27 +31,26 @@ class Main {
 
             tree.get(nodeA).add(nodeB);
             tree.get(nodeB).add(nodeA);
-
-            maxSize = Math.max(maxSize, tree.get(nodeA).size());
-            maxSize = Math.max(maxSize, tree.get(nodeB).size());
         }
 
-        boolean[] visited = new boolean[N + 1];
-        int answer = 0;
-        for (int i = maxSize; i > 0; i--) {
-            for (Integer key : tree.keySet()) {
-                if (tree.get(key).size() == i) {
-                    if (!visited[key]) {
-                        visited[key] = true;
-                        for (Integer child : tree.get(key)) {
-                            visited[child] = true;
-                        }
-                        answer++;
-                    }
-                }
+        dfs(1);
+        int answer = Math.min(dp[1][0], dp[1][1]);
+
+        System.out.println(answer);
+    }
+
+    public static void dfs(int node) {
+        visited[node] = true;
+        dp[node][0] = 0;
+        dp[node][1] = 1;
+
+        for (Integer child : tree.get(node)) {
+            if (!visited[child]) {
+                dfs(child);
+                dp[node][0] += dp[child][1];
+                dp[node][1] += Math.min(dp[child][0], dp[child][1]);
             }
         }
 
-        System.out.println(answer);
     }
 }
