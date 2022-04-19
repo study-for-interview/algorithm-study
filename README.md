@@ -15,6 +15,20 @@
 ***
 
 
+## 2022 04/18 ~ 04/21
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [7490](https://www.acmicpc.net/problem/7490) | [0 만들기](https://www.acmicpc.net/problem/7490) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [4991](https://www.acmicpc.net/problem/4991) | [로봇 청소기](https://www.acmicpc.net/problem/4991) | [비트 마스킹](https://solved.ac/problems/tags/bitmask) |
+| ![](전찬의/resources/level-3.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [파괴되지 않은 건물](https://programmers.co.kr/learn/courses/30/lessons/92344) | Blind |
+
+* [로봇 청소기](https://www.acmicpc.net/problem/4991) 문제는 단순 DFS/BFS로 풀리지만 비트마스킹을 이용하여 문제를 풀어봅시다. (TSP 또는 BFS+비트마스킹)
+
+
+
+<br> <br> <br>
+
+
 ## 2022 04/14 ~ 04/18
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
