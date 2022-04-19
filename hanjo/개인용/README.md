@@ -30,6 +30,7 @@
 |W13D3|완전탐색|S4_한수|https://www.acmicpc.net/problem/1065|
 |W13D3|백트래킹|G5_연구소|https://www.acmicpc.net/problem/14502|
 |W14D3|카카오|L1_다트게임|https://programmers.co.kr/learn/courses/30/lessons/17682|
+|W16D2|카카오|L1_비밀지도|https://programmers.co.kr/learn/courses/30/lessons/17681|
 
 
 <br>
