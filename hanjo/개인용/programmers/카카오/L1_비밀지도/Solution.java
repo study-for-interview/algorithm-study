@@ -9,12 +9,6 @@ class Solution {
     public String[] solution(int n, int[] arr1, int[] arr2) {
         this.n = n;
 
-        int[] container = new int[n];
-        for (int i = 0; i < n; i++) {
-            container[i] = arr1[i] | arr2[i];
-        }
-        System.out.println(Arrays.toString(container));
-
         int[][] map1 = fill(arr1);
         int[][] map2 = fill(arr2);
         String[] answer = combine(map1, map2);
