@@ -6,19 +6,19 @@ public class 합병정렬 {
 
     public static int[] mergeSort(int[] arr){
         
-        reculsive(arr, 0, arr.length - 1);
+        recursive(arr, 0, arr.length - 1);
 
         return arr;
     }
 
-    public static void reculsive(int[] arr, int left, int right){
+    public static void recursive(int[] arr, int left, int right){
         
         if(left < right){
             int mid = (left + right)/2;
 
             // 분할
-            reculsive(arr, left, mid);
-            reculsive(arr, mid+1, right);
+            recursive(arr, left, mid);
+            recursive(arr, mid+1, right);
 
             // 정복 - 합치면서 정렬
             int[] sorted = new int[right-left+1];
