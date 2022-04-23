@@ -7,12 +7,12 @@ public class 퀵정렬 {
 
     public static int[] quickSort(int[] arr){
 
-        reculsive(arr, 0, arr.length-1);
+        recursive(arr, 0, arr.length-1);
     
         return arr;
     }
 
-    public static void reculsive(int[] arr, int left, int right){
+    public static void recursive(int[] arr, int left, int right){
         
         if(left < right){
             // 피봇정하고 피봇 기준으로 정렬
@@ -36,8 +36,8 @@ public class 퀵정렬 {
             }
             
             // 분할하여 반복
-            reculsive(arr, left, R-1);
-            reculsive(arr, R+1, right);
+            recursive(arr, left, R-1);
+            recursive(arr, R+1, right);
         }
     }
 
