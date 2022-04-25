@@ -14,7 +14,32 @@
 
 ***
 
-## 2022 04/18 ~ 04/21
+## 2022 04/25 ~ 04/28
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| ![](전찬의/resources/level-1.png) | [2021 KAKAO 인턴십 1번](https://programmers.co.kr/learn/challenges) | [숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301) | Blind |
+| ![](전찬의/resources/level-4.png) | [2021 KAKAO 인턴십 4번](https://programmers.co.kr/learn/challenges) | [미로 탈출](https://programmers.co.kr/learn/courses/30/lessons/81304) | Blind |
+| ![](전찬의/resources/level-5.png) | [2021 KAKAO 인턴십 5번](https://programmers.co.kr/learn/challenges) | [시험장 나누기](https://programmers.co.kr/learn/courses/30/lessons/81305) | Blind |
+
+<details>
+<summary></summary>
+<div markdown="1">
+  
+| 난이도 | 문제 번호 | 문제 이름 |
+|:------:|:----:|:---------:|
+| ![](전찬의/resources/level-4.png) | [2021 KAKAO 공채 7번](https://programmers.co.kr/learn/courses/30/lessons/72416) | [매출 하락 최소화](https://programmers.co.kr/learn/courses/30/lessons/72416) |
+  
+![포기하면 편해](https://t1.daumcdn.net/cfile/tistory/251CE54557BDE53E14)
+
+</div>
+</details>
+
+
+
+
+<br> <br> <br>
+
+## 2022 04/21 ~ 04/25
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
 | ![](전찬의/resources/level-2.png) | [2022 KAKAO 인턴십 2번](https://programmers.co.kr/learn/challenges) | [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) | Blind |
