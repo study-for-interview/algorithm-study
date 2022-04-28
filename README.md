@@ -14,6 +14,19 @@
 
 ***
 
+## 2022 04/28 ~ 05/02
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| ![](전찬의/resources/level-3.png) | [2022 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [사라지는 발판](https://programmers.co.kr/learn/courses/30/lessons/92345) | Blind |
+| ![](전찬의/resources/level-3.png) | [2021 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413) | Blind |
+| ![](전찬의/resources/level-3.png) | [2021 KAKAO 공채](https://programmers.co.kr/learn/challenges) | [카드 짝 맞추기](https://programmers.co.kr/learn/courses/30/lessons/72415) | Blind |
+
+
+
+
+<br> <br> <br>
+
+
 ## 2022 04/25 ~ 04/28
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
