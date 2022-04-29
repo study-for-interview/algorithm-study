@@ -123,6 +123,5 @@ public class Main2 {
  * 
  * 비트마스킹 + bfs 풀이
  * 
- * 1. 
  * 
  */
