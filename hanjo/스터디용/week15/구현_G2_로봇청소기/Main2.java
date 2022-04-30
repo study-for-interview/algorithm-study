@@ -67,7 +67,8 @@ public class Main2 {
         }
 
         // 방문할 곳 만큼의 비트를 잡는다
-        boolean[][][] isVisited = new boolean[h][w][1 << dirtyNum];
+        int maxMask = 1 << dirtyNum;
+        boolean[][][] isVisited = new boolean[h][w][maxMask];
         Queue<Node> queue = new LinkedList<>();
         queue.offer(start);
         isVisited[start.x][start.y][0] = true;
@@ -75,7 +76,7 @@ public class Main2 {
         while(!queue.isEmpty()){
             Node cur = queue.poll();
             // 종료조건
-            if(cur.mask == (1 << dirtyNum) - 1){
+            if(cur.mask == maxMask - 1){
                 return cur.weight;
             }
             
@@ -121,7 +122,6 @@ public class Main2 {
  * ================================================================================
  * 
  * 비트마스킹 + bfs 풀이
- * 
  * 
  * 
  */
