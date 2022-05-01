@@ -3,12 +3,10 @@ using namespace std;
 
 int N,M;
 int m[10001]{};
-int dp[10001][2]{}; // 0:우수x , 1:우수o
+int dp[10001][2]{};
 vector<int> adj[10001]{};
-int par[10001]{};
 
 void makeTree(int now, int parent){
-    par[now] = parent;
     for(int i=0; i<adj[now].size(); i++){
         int next = adj[now][i];
         if(next==parent) continue;
