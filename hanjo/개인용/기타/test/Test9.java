@@ -34,7 +34,6 @@ public class Test9 {
         List<Integer> target = new ArrayList<>();
 
         AtomicInteger a = new AtomicInteger(1);
-        Integer b = 1;
 
         
         list.stream().forEach(v -> {
