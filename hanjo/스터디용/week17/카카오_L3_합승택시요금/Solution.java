@@ -47,9 +47,12 @@ class Solution {
         }
 
         // 다익스트라 
-        dijkstra(s, distS);
-        dijkstra(a, distA);
-        dijkstra(b, distB);
+        // dijkstra(s, distS);
+        // dijkstra(a, distA);
+        // dijkstra(b, distB);
+        dijkstra2(s, distS);
+        dijkstra2(a, distA);
+        dijkstra2(b, distB);
 
         // 가장 효율적인 경로 찾기
         int min = INF;
@@ -75,6 +78,29 @@ class Solution {
                 }
                 dist[next.num] = nextDist;
                 queue.offer(next);
+            }
+        }
+    }
+
+    public void dijkstra2(int start, int[] dist){
+        PriorityQueue<Node> queue = new PriorityQueue<>();
+        queue.offer(new Node(start, 0));
+        dist[start] = 0;
+
+        while(!queue.isEmpty()){
+            Node cur = queue.poll();
+
+            if(cur.weight > dist[cur.num]){
+                continue;
+            }
+
+            for(Node next : graph.get(cur.num)){
+                int nextDist = cur.weight + next.weight;
+                if(nextDist >= dist[next.num]){
+                    continue;
+                }
+                dist[next.num] = nextDist;
+                queue.offer(new Node(next.num, nextDist));
             }
         }
     }
@@ -112,13 +138,16 @@ class Solution {
  * 풀이시간 : 30m
  * 
  * 시간복잡도 : O(E*logV) 3번
- * 테케 7 : (60.23ms, 66.6MB)
+ * 테케 7(1번함수) : (60.23ms, 66.6MB) 
+ * 테케 7(2번함수) : (25.61ms, 63.4MB)
  * ================================================================================
  * 
  * 기본적인 다익스트라 문제
  * 
  * 다익스트라를 통해 세 정점에서의 최단경로를 구하고, 가장 작은 값을 가지는 정점을 고르면 끝
- * 지금까지 풀던 다익스트라 방식을 사용했는데, 이보다 더 효율적으로 구현 가능 (Solution2)
- *  -> 앞으로는 효율적인 방법을 사용하자..
+ * 지금까지 풀던 다익스트라 방식(1번함수)은 방문체크 없이 동작해서 루프에 종종 빠졌었음..
+ *  -> 그리고 테케를 비교한 결과, 전체적으로 시간이 오래 소요됨
+ * 
+ * 따라서 기존 방식을 버리고 우선순위큐에 담는 정점의 가중치를 업데이트 시키는 방식으로 갈아탐
  * 
  */
