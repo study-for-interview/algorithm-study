@@ -63,6 +63,7 @@ class Solution {
         return min;
     }
 
+    // 기존방식
     public void dijkstra(int start, int[] dist){
         PriorityQueue<Node> queue = new PriorityQueue<>();
         queue.offer(new Node(start, 0));
@@ -82,6 +83,7 @@ class Solution {
         }
     }
 
+    // 효율+안정적인 방식
     public void dijkstra2(int start, int[] dist){
         PriorityQueue<Node> queue = new PriorityQueue<>();
         queue.offer(new Node(start, 0));
@@ -90,11 +92,14 @@ class Solution {
         while(!queue.isEmpty()){
             Node cur = queue.poll();
 
+            // 반드시 거리 효율 체크
             if(cur.weight > dist[cur.num]){
                 continue;
             }
 
             for(Node next : graph.get(cur.num)){
+                // 둘 다 가능
+                // int nextDist = dist[cur.num] + next.weight;
                 int nextDist = cur.weight + next.weight;
                 if(nextDist >= dist[next.num]){
                     continue;
