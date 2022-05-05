@@ -20,9 +20,9 @@
 
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
-| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [1번]() | Blind |
-| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [2번]() | Blind |
-| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [3번]() | Blind |
+| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888) | Blind |
+| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [기둥과 보 설치](https://programmers.co.kr/learn/courses/30/lessons/60061) | Blind |
+| Blind | [프로그래머스](https://programmers.co.kr/learn/challenges) | [블록이동하기](https://programmers.co.kr/learn/courses/30/lessons/60063) | Blind |
 
 
 
