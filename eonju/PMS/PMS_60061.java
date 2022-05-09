@@ -1,153 +1,136 @@
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import java.util.Deque;
+import java.util.Iterator;
 
-public class Solution {
+class Solution {
 
-    private static final int COL = 0;
-    private static final int WID = 1;
-    private static final int DELETE = 0;
-    private static final int ADD = 1;
+    static boolean[][] gidung;
+    static boolean[][] boo;
+    static int N;
+    static Deque<int[]> ansList = new ArrayDeque<>();
 
-    private static List<FRAME> cols = new ArrayList<>();
-    private static List<FRAME> wids = new ArrayList<>();
+    public int[][] solution(int n, int[][] build_frame) {
+        N = n + 1;
+        gidung = new boolean[N][N];
+        for (int i = 0; i < N; i++) {
+            gidung[i] = new boolean[N];
+        }
+        boo = new boolean[N][N];
+        for (int i = 0; i < N; i++) {
+            boo[i] = new boolean[N];
+        }
 
-    public static int[][] solution(int n, int[][] build_frame) {
-        for (int i = 0; i < build_frame.length; i++) {
-            int[] frame = build_frame[i];
-            int width = frame[0];
-            int height = frame[1];
-            int frameType = frame[2];
-            int command = frame[3];
+        for (int[] bf : build_frame) {
 
-            if (frameType == COL) {
-                if (command == ADD) {
-                    if (addColIsOK(height, width)) {
-                        cols.add(new FRAME(height, width, frameType));
-                    }
-                } else {
-                    removeColIsOK(height, width);
+            if (bf[2] == 1 && bf[3] == 1) { // 보 설치
+                if (booCheck(bf[0], bf[1])) {
+                    boo[bf[0]][bf[1]] = true;
+                    ansList.add(new int[]{bf[0], bf[1], 1});
                 }
+            }
+
+            if (bf[2] == 0 && bf[3] == 1) { // 기둥 설치
+                if (gidungCheck(bf[0], bf[1])) {
+                    gidung[bf[0]][bf[1]] = true;
+                    ansList.add(new int[]{bf[0], bf[1], 0});
+                }
+            }
+
+            if (bf[2] == 0 && bf[3] == 0) { // 기둥 삭제
+                gidung[bf[0]][bf[1]] = false;
+                remove(bf[0], bf[1], bf[2]);
+                if (!allCheck()) {
+                    gidung[bf[0]][bf[1]] = true;
+                    ansList.add(new int[]{bf[0], bf[1], bf[2]});
+                }
+
+
+            }
+            if (bf[2] == 1 && bf[3] == 0) { // 보 삭제
+                boo[bf[0]][bf[1]] = false;
+                remove(bf[0], bf[1], bf[2]);
+                if (!allCheck()) {
+                    boo[bf[0]][bf[1]] = true;
+                    ansList.add(new int[]{bf[0], bf[1], bf[2]});
+                }
+
+            }
+
+        }
+
+        return ansListToAnswer();
+    }
+
+    static int[][] ansListToAnswer() {
+
+        Iterator<int[]> iterator = ansList.iterator();
+        int[][] ans = new int[ansList.size()][3];
+        int i = 0;
+        while (iterator.hasNext()) {
+            ans[i++] = iterator.next();
+        }
+        Arrays.sort(ans, (a, b) -> {
+            if (a[0] != b[0]) {
+                return a[0] - b[0];
+            } else if (a[1] != b[1]) {
+                return a[1] - b[1];
             } else {
-                if (command == ADD) {
-                    if (addWidIsOk(height, width)) {
-                        wids.add(new FRAME(height, width, frameType));
-                    }
-                } else {
-                    removeWidIsOK(height, width);
+                return a[2] - b[2];
+            }
+        });
+        return ans;
+    }
+
+    static boolean booCheck(int x, int y) {
+        if (y == 0) {
+            return false; //바닥
+        } else if (gidung[x][y - 1] || gidung[x + 1][y - 1]) { // 양쪽 기둥
+            return true;
+        } else if (x - 1 >= 0 && x + 1 < N && boo[x - 1][y] && boo[x + 1][y]) { // 양쪽 보
+            return true;
+        }
+        return false;
+    }
+
+    static boolean gidungCheck(int x, int y) {
+        if (y == 0) {
+            return true; // 바닥
+        } else if ((x - 1 >= 0 && boo[x - 1][y]) || boo[x][y]) {
+            return true; // 한쪽 끝에 보
+        } else if (y - 1 >= 0 && gidung[x][y - 1]) {
+            return true; //다른 기둥 위에
+        }
+
+        return false;
+    }
+
+    static void remove(int x, int y, int w) {
+        int ansListSize = ansList.size();
+        for (int i = 0; i < ansListSize; i++) {
+            int[] tmp = ansList.pollFirst();
+            if (!(tmp[0] == x && tmp[1] == y && tmp[2] == w)) {
+                ansList.addLast(tmp);
+            }
+        }
+    }
+
+    static boolean allCheck() {
+        Iterator<int[]> iterator = ansList.iterator();
+        while (iterator.hasNext()) {
+            int[] tmp = iterator.next();
+            if (tmp[2] == 1) {
+                if (!booCheck(tmp[0], tmp[1])) {
+                    return false;
+                }
+
+            } else {
+                if (!gidungCheck(tmp[0], tmp[1])) {
+                    return false;
                 }
             }
         }
-
-        cols.addAll(wids);
-        cols.sort(Comparator.comparing(FRAME::getWidth).thenComparing(FRAME::getHeight).thenComparing(FRAME::getType));
-
-        int[][] answer = new int[cols.size()][3];
-
-        for (int i = 0; i < cols.size(); i++) {
-            answer[i] = new int[]{cols.get(i).width, cols.get(i).height, cols.get(i).type};
-        }
-        return answer;
-    }
-
-    public static boolean addColIsOK(int height, int width) {
-        if (height == 0) {
-            return true;
-        }
-        if (cols.contains(new FRAME(height - 1, width, COL))) {
-            return true;
-        }
-        if (wids.contains(new FRAME(height, width - 1, WID))) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public static boolean addWidIsOk(int height, int width) {
-        if (cols.contains(new FRAME(height - 1, width, COL)) || cols.contains(new FRAME(height - 1, width + 1, COL))) {
-            return true;
-        }
-
-        if (wids.contains(new FRAME(height, width - 1, WID)) && wids.contains(new FRAME(height, width + 1, WID))) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public static void removeColIsOK(int height, int width) {
-        cols.remove(new FRAME(height, width, COL));
-        if (!isOK()) {
-            cols.add(new FRAME(height, width, COL));
-        }
-    }
-
-    public static void removeWidIsOK(int height, int width) {
-        wids.remove(new FRAME(height, width, WID));
-        if (!isOK()) {
-            wids.add(new FRAME(height, width, WID));
-        }
-    }
-
-    public static boolean isOK() {
-        for (FRAME col : cols) {
-            if (!addColIsOK(col.height, col.width)) {
-                return false;
-            }
-        }
-
-        for (FRAME wid : wids) {
-            if (!addWidIsOk(wid.height, wid.width)) {
-                return false;
-            }
-        }
-
         return true;
     }
 
-    static class FRAME {
-
-        private int height;
-        private int width;
-        private int type;
-
-        public FRAME(int height, int width, int type) {
-            this.height = height;
-            this.width = width;
-            this.type = type;
-        }
-
-        public int getHeight() {
-            return height;
-        }
-
-        public int getWidth() {
-            return width;
-        }
-
-        public int getType() {
-            return type;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            FRAME frame = (FRAME) o;
-            return height == frame.height && width == frame.width && type == frame.type;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(height, width, type);
-        }
-
-    }
 }
