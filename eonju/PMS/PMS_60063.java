@@ -1,92 +1,162 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
-class Solution {
+public class Solution {
 
-    private static int[][] map;
-    private static int[][] dist;
-    private static int[] moveHeight = {-1, 1, 0, 0};
-    private static int[] moveWidth = {0, 0, -1, 1};
+    public int map[][];
+    public int n;
+    public int dx[] = {-1, 1, 0, 0};
+    public int dy[] = {0, 0, -1, 1};
+    public boolean row[][];
+    public boolean col[][];
+    public int answer;
 
-    public static void main(String[] args) {
-        System.out.println(
-            solution(new int[][]{{0, 0, 0, 1, 1}, {0, 0, 0, 1, 0}, {0, 1, 0, 1, 1}, {1, 1, 0, 0, 1}, {0, 0, 0, 0, 0}}));
-    }
-
-    public static int solution(int[][] board) {
-        map = board;
-        dist = new int[board.length][board[0].length];
-        for (int i = 0; i < board.length; i++) {
-            Arrays.fill(dist[i], Integer.MAX_VALUE);
+    public int solution(int[][] board) {
+        n = board.length;
+        answer = 0;
+        row = new boolean[n][n];
+        col = new boolean[n][n];
+        map = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            map[i] = board[i].clone();
         }
 
-        bfs();
+        row[0][0] = true;
+        row[0][1] = true;
 
-        return dist[board.length - 1][board[0].length - 1];
+        start();
+
+        return answer;
     }
 
-    public static void bfs() {
-        Queue<int[]> queue = new LinkedList<>();
-        dist[0][0] = 0;
-        dist[0][1] = 0;
-        queue.add(new int[]{0, 0, 0});
-        queue.add(new int[]{0, 1, 0});
+    public void start() {
+        Queue<Robot> q = new LinkedList<Robot>();
+        q.add(new Robot(new Point(0, 0), new Point(0, 1), 0));
+        q.add(new Robot(null, null, -1));
+        int count = 0;
 
-        while (!queue.isEmpty()) {
-            int[] poll1 = queue.poll();
-            int poll1Height = poll1[0];
-            int poll1Width = poll1[1];
+        while (!q.isEmpty()) {
+            Robot now = q.poll();
 
-            int[] poll2 = queue.poll();
-            int poll2Height = poll2[0];
-            int poll2Width = poll2[1];
-
-            int weight = poll1[2];
-
-            for (int i = 0; i < moveHeight.length; i++) {
-                int nextHeight1 = poll1Height + moveHeight[i];
-                int nextHeight2 = poll2Height + moveHeight[i];
-                int nextWidth1 = poll1Width + moveWidth[i];
-                int nextWidth2 = poll2Width + moveWidth[i];
-
-                int cnt = 0;
-                if (!isInBound(nextHeight1, nextWidth1)) {
-                    cnt++;
+            if (now.dir == -1) {
+                count++;
+                if (!q.isEmpty()) {
+                    q.add(new Robot(null, null, -1));
                 }
-                if (!isInBound(nextHeight2, nextWidth2)) {
-                    cnt++;
-                }
+                continue;
+            }
 
-                if (cnt == 2) {
-                    continue;
-                } else {
-                    if (!isInBound(nextHeight1, nextWidth1) || map[nextHeight1][nextWidth1] == 1) {
-                        weight++;
-                        if (nextHeight1 == nextHeight2) { // 가로일 경우
+            if ((now.p1.x == n - 1 && now.p1.y == n - 1) || (now.p2.x == n - 1 && now.p2.y == n - 1)) {
+                answer = count;
+                break;
+            }
 
-                        } else {
+            if (now.dir == 0) {
+                for (int i = 0; i < 4; i++) {
+                    int np1X = now.p1.x + dx[i];
+                    int np1Y = now.p1.y + dy[i];
+                    int np2X = now.p2.x + dx[i];
+                    int np2Y = now.p2.y + dy[i];
 
-                        }
-
-                    } else if (!isInBound(nextHeight2, nextWidth2) || map[nextHeight2][nextWidth2] == 1) {
-                        weight++;
-                        if(nextHeight1 == nextHeight2){
-
+                    if (check(np1X, np1Y) && check(np2X, np2Y)) {
+                        if (!row[np1X][np1Y] || !row[np2X][np2Y]) {
+                            Robot next = new Robot(new Point(np1X, np1Y), new Point(np2X, np2Y), 0);
+                            row[np1X][np1Y] = true;
+                            row[np2X][np2Y] = true;
+                            q.add(next);
                         }
                     }
                 }
 
-                dist[nextHeight1][nextWidth1] = weight + 1;
-                dist[nextHeight2][nextWidth2] = weight + 1;
-                queue.add(new int[]{nextHeight1, nextWidth1, weight + 1});
-                queue.add(new int[]{nextHeight2, nextWidth2, weight + 1});
+                for (int i = -1; i <= 1; i += 2) {
+                    int np1X = now.p1.x + i;
+                    int np1Y = now.p1.y;
+                    int np2X = now.p2.x + i;
+                    int np2Y = now.p2.y;
+
+                    if (check(np1X, np1Y) && check(np2X, np2Y)) {
+                        if (rotate(np1X, np1Y, now.p1.x, now.p1.y) && (!col[np1X][np1Y] || !col[now.p1.x][now.p1.y])) {
+                            col[np1X][np1Y] = true;
+                            col[now.p1.x][now.p1.y] = true;
+                            q.add(new Robot(new Point(np1X, np1Y), new Point(now.p1.x, now.p1.y), 1));
+                        }
+                        if (rotate(np2X, np2Y, now.p2.x, now.p2.y) && (!col[np2X][np2Y] || !col[now.p2.x][now.p2.y])) {
+                            col[np2X][np2Y] = true;
+                            col[now.p2.x][now.p2.y] = true;
+                            q.add(new Robot(new Point(np2X, np2Y), new Point(now.p2.x, now.p2.y), 1));
+                        }
+                    }
+                }
+            } else {
+                for (int i = 0; i < 4; i++) {
+                    int np1X = now.p1.x + dx[i];
+                    int np1Y = now.p1.y + dy[i];
+                    int np2X = now.p2.x + dx[i];
+                    int np2Y = now.p2.y + dy[i];
+
+                    if (check(np1X, np1Y) && check(np2X, np2Y)) {
+                        if (!col[np1X][np1Y] || !col[np2X][np2Y]) {
+                            Robot next = new Robot(new Point(np1X, np1Y), new Point(np2X, np2Y), 1);
+                            col[np1X][np1Y] = true;
+                            col[np2X][np2Y] = true;
+                            q.add(next);
+                        }
+                    }
+                }
+
+                for (int i = -1; i <= 1; i += 2) {
+                    int np1X = now.p1.x;
+                    int np1Y = now.p1.y + i;
+                    int np2X = now.p2.x;
+                    int np2Y = now.p2.y + i;
+
+                    if (check(np1X, np1Y) && check(np2X, np2Y)) {
+                        if (rotate(np1X, np1Y, now.p1.x, now.p1.y) && (!row[np1X][np1Y] || !row[now.p1.x][now.p1.y])) {
+                            row[np1X][np1Y] = true;
+                            row[now.p1.x][now.p1.y] = true;
+                            q.add(new Robot(new Point(np1X, np1Y), new Point(now.p1.x, now.p1.y), 0));
+                        }
+                        if (rotate(np2X, np2Y, now.p2.x, now.p2.y) && (!row[np2X][np2Y] || !row[now.p2.x][now.p2.y])) {
+                            row[np2X][np2Y] = true;
+                            row[now.p2.x][now.p2.y] = true;
+                            q.add(new Robot(new Point(np2X, np2Y), new Point(now.p2.x, now.p2.y), 0));
+                        }
+                    }
+                }
             }
         }
-
     }
 
-    public static boolean isInBound(int height, int width) {
-        return height >= 0 && width >= 0 && height < dist.length && width < dist[0].length;
+    public boolean rotate(int x1, int y1, int x2, int y2) {
+        if (!check(x1, y1) || !check(x2, y2)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean check(int x, int y) {
+        return x >= 0 && y >= 0 && x < n && y < n && map[x][y] == 0;
+    }
+
+    class Robot {
+
+        Point p1, p2;
+        int dir;
+
+        Robot(Point p1, Point p2, int dir) {
+            this.p1 = p1;
+            this.p2 = p2;
+            this.dir = dir;
+        }
+    }
+
+    class Point {
+
+        int x, y;
+
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
     }
 }
