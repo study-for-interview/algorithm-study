@@ -24,37 +24,37 @@ class Main {
                 break;
             }
 
-            int start = i + 1;
-            int end = n - 1;
-            while (start < end) {
-                int s = 1;
-                int e = 1;
+            int leftIdx = i + 1;
+            int rightIdx = n - 1;
+            while (leftIdx < rightIdx) {
+                int leftCnt = 1;
+                int rightCnt = 1;
 
-                int current = numbers[i] + numbers[start] + numbers[end];
+                int current = numbers[i] + numbers[leftIdx] + numbers[rightIdx];
 
                 if (current == 0) {
-                    if (numbers[start] == numbers[end]) {
-                        answer += comb(end - start + 1);
+                    if (numbers[leftIdx] == numbers[rightIdx]) {
+                        answer += comb(rightIdx - leftIdx + 1);
                         break;
                     }
 
-                    while (start + 1 < end && numbers[start] == numbers[start + 1]) {
-                        s++;
-                        start++;
+                    while (leftIdx + 1 < rightIdx && numbers[leftIdx] == numbers[leftIdx + 1]) {
+                        leftCnt++;
+                        leftIdx++;
                     }
 
-                    while (start < end - 1 && numbers[end] == numbers[end - 1]) {
-                        e++;
-                        end--;
+                    while (leftIdx < rightIdx - 1 && numbers[rightIdx] == numbers[rightIdx - 1]) {
+                        rightCnt++;
+                        rightIdx--;
                     }
 
-                    answer += s * e;
+                    answer += leftCnt * rightCnt;
                 }
 
                 if (current > 0) {
-                    end--;
+                    rightIdx--;
                 } else {
-                    start++;
+                    leftIdx++;
                 }
             }
         }
