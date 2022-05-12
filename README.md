@@ -14,6 +14,19 @@
 
 ***
 
+## 2022 05/12 ~ 05/16
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [1654](https://www.acmicpc.net/problem/1654) | [랜선 자르기](https://www.acmicpc.net/problem/1654) | 파라메트릭 서치 |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [21609](https://www.acmicpc.net/problem/21609) | [상어 중학교](https://www.acmicpc.net/problem/21609) | 구현 |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [17471](https://www.acmicpc.net/problem/17471) | [게리맨더링](https://www.acmicpc.net/problem/17471) | Blind |
+
+
+
+
+<br> <br> <br>
+
+
 ## 2022 05/09 ~ 05/12
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
