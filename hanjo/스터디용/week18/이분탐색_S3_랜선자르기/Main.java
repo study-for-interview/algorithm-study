@@ -31,6 +31,7 @@ public class Main {
 
         while(left < right){
             long mid = (left + right)/2;
+            
             if(isValid(mid, k, lan)){
                 left = mid + 1;
             }
