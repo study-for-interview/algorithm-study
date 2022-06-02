@@ -14,6 +14,18 @@
 
 ***
 
+## 2022 06/02 ~ 06/06
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [1780](https://www.acmicpc.net/problem/1780) | [종이의 개수](https://www.acmicpc.net/problem/1780) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [1253](https://www.acmicpc.net/problem/1253) | [좋다](https://www.acmicpc.net/problem/1253) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [17090](https://www.acmicpc.net/problem/17090) | [미로 탈출하기](https://www.acmicpc.net/problem/17090) | Blind |
+
+
+
+
+<br> <br> <br>
+
 ## 2022 05/26 ~ 05/30
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
