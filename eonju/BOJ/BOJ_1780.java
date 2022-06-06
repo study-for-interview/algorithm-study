@@ -1,70 +1,84 @@
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
-class Main {
+public class Main {
 
-    private static int[][] original;
-    private static int[] answer;
-    private static int n;
+    public static int[][] board;
+    public static int MINUS = 0;
+    public static int ZERO = 0;
+    public static int PLUS = 0;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        n = Integer.parseInt(bufferedReader.readLine());
-        original = new int[n][n];
-        answer = new int[3];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int number = check(0, 0, n);
-        if(number == -100){
-            solve(0, 0, n, n, n / 3);
-        } else {
-            if (number == -1) {
-                answer[0]++;
-            } else if (number == 0) {
-                answer[1]++;
-            } else if (number == 1) {
-                answer[2]++;
+        int N = Integer.parseInt(br.readLine());
+        board = new int[N][N];
+        StringTokenizer st;
+
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
+            for (int j = 0; j < N; j++) {
+                board[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        for (int i = 0; i < answer.length; i++) {
-            System.out.println(answer[i]);
-        }
+        divide(0, 0, N);
+
+        System.out.println(MINUS);	// -1
+        System.out.println(ZERO);	// 0
+        System.out.println(PLUS);	// 1
+
     }
 
-    public static void solve(int startI, int startJ, int endI, int endJ, int areaSize) {
-        for (int i = startI; i < endI; i += areaSize) {
-            for (int j = startJ; j < endJ; j += areaSize) {
-                int num = check(i, j, areaSize);
 
-                if (num == -100) {
-                    solve(i, j, i + areaSize, j + areaSize, areaSize / 3);
-                    continue;
-                }
+    public static void divide(int row, int col, int size) {
 
-                if (num == -1) {
-                    answer[0]++;
-                } else if (num == 0) {
-                    answer[1]++;
-                } else if (num == 1) {
-                    answer[2]++;
+        // 만약 같은 색상으로 이루어져있다면 해당 색상 카운트를 증가시킨다.
+        if (colorCheck(row, col, size)) {
+            if(board[row][col] == -1) {
+                MINUS++;
+            }
+            else if(board[row][col] == 0) {
+                ZERO++;
+            }
+            else {
+                PLUS++;
+            }
+
+            return;
+        }
+
+        int newSize = size / 3;
+
+        divide(row, col, newSize);								// 왼쪽 위
+        divide(row, col + newSize, newSize);						// 중앙 위
+        divide(row, col + 2 * newSize, newSize);					// 오른쪽 위
+
+        divide(row + newSize, col, newSize);						// 왼쪽 중간
+        divide(row + newSize, col + newSize, newSize);			// 중앙 중간
+        divide(row + newSize, col + 2 * newSize, newSize);		// 오른쪽 중간
+
+        divide(row + 2 * newSize, col, newSize);					// 왼쪽 아래
+        divide(row + 2 * newSize, col + newSize, newSize);		// 중앙 아래
+        divide(row + 2 * newSize, col + 2 * newSize, newSize);	// 오른쪽 아래
+
+    }
+
+    public static boolean colorCheck(int row, int col, int size) {
+        int color = board[row][col];
+
+        for (int i = row; i < row + size; i++) {
+            for (int j = col; j < col + size; j++) {
+                if (color != board[i][j]) {
+                    return false;
                 }
             }
         }
+
+        return true;
     }
 
-    public static int check(int startI, int startJ, int areaSize) {
-        int number = original[startI][startJ];
-
-        for (int i = startI; i < startI + areaSize; i++) {
-            for (int j = startJ; j < startJ + areaSize; j++) {
-                if (number != original[i][j]) {
-                    return -100;
-                }
-            }
-        }
-
-        return number;
-    }
 }
