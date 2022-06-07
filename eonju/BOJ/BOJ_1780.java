@@ -1,84 +1,67 @@
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
-public class Main {
+class Main {
 
-    public static int[][] board;
-    public static int MINUS = 0;
-    public static int ZERO = 0;
-    public static int PLUS = 0;
+    private static int MINUS = 0;
+    private static int ZERO = 0;
+    private static int PLUS = 0;
+    private static int[][] map;
 
     public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(bufferedReader.readLine());
+        map = new int[n][n];
 
-        int N = Integer.parseInt(br.readLine());
-        board = new int[N][N];
-        StringTokenizer st;
-
-        for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine(), " ");
-            for (int j = 0; j < N; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
-            }
+        for (int i = 0; i < n; i++) {
+            map[i] = Arrays.stream(bufferedReader.readLine().split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
         }
 
-        divide(0, 0, N);
-
-        System.out.println(MINUS);	// -1
-        System.out.println(ZERO);	// 0
-        System.out.println(PLUS);	// 1
+        divide(0, 0, n);
+        System.out.println(MINUS);
+        System.out.println(ZERO);
+        System.out.println(PLUS);
 
     }
 
-
-    public static void divide(int row, int col, int size) {
-
-        // 만약 같은 색상으로 이루어져있다면 해당 색상 카운트를 증가시킨다.
-        if (colorCheck(row, col, size)) {
-            if(board[row][col] == -1) {
-                MINUS++;
-            }
-            else if(board[row][col] == 0) {
-                ZERO++;
-            }
-            else {
-                PLUS++;
-            }
-
+    public static void divide(int startI, int startJ, int size) {
+        if (check(startI, startJ, size)) {
             return;
         }
 
-        int newSize = size / 3;
+        int tmp = size / 3;
 
-        divide(row, col, newSize);								// 왼쪽 위
-        divide(row, col + newSize, newSize);						// 중앙 위
-        divide(row, col + 2 * newSize, newSize);					// 오른쪽 위
-
-        divide(row + newSize, col, newSize);						// 왼쪽 중간
-        divide(row + newSize, col + newSize, newSize);			// 중앙 중간
-        divide(row + newSize, col + 2 * newSize, newSize);		// 오른쪽 중간
-
-        divide(row + 2 * newSize, col, newSize);					// 왼쪽 아래
-        divide(row + 2 * newSize, col + newSize, newSize);		// 중앙 아래
-        divide(row + 2 * newSize, col + 2 * newSize, newSize);	// 오른쪽 아래
-
+        for (int i = startI; i < startI + size; i += tmp) {
+            for (int j = startJ; j < startJ + size; j += tmp) {
+                divide(i, j, tmp);
+            }
+        }
     }
 
-    public static boolean colorCheck(int row, int col, int size) {
-        int color = board[row][col];
+    public static boolean check(int startI, int startJ, int size) {
+        int number = map[startI][startJ];
 
-        for (int i = row; i < row + size; i++) {
-            for (int j = col; j < col + size; j++) {
-                if (color != board[i][j]) {
+        for (int i = startI; i < startI + size; i++) {
+            for (int j = startJ; j < startJ + size; j++) {
+                if (number != map[i][j]) {
                     return false;
                 }
             }
         }
 
+        if (number == -1) {
+            MINUS++;
+        } else if (number == 0) {
+            ZERO++;
+        } else {
+            PLUS++;
+        }
+
         return true;
     }
-
 }
