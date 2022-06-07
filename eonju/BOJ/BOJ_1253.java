@@ -8,34 +8,40 @@ class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(bufferedReader.readLine());
-
         int[] numbers = Arrays.stream(bufferedReader.readLine().split(" "))
             .mapToInt(Integer::parseInt)
+            .sorted()
             .toArray();
 
-        Arrays.sort(numbers);
-
-        int answer = 0;
-        for (int i = 0; i < n; i++) {
-            int target = numbers[i];
-
-            if(isGood(i, target, numbers)){
-                answer++;
-            }
+        if (numbers.length < 3) {
+            System.out.println(0);
+            return;
         }
 
-        System.out.println(answer);
-    }
+        int answer = 0;
 
-    public static boolean isGood(int targetIdx, int target, int[] numbers) {
-        for (int j = 0; j < targetIdx; j++) {
-            for (int k = j + 1; k < targetIdx; k++) {
-                if (numbers[j] + numbers[k] == target) {
-                    return true;
+        for (int i = 2; i < n; i++) {
+            int target = numbers[i];
+            int left = 0;
+            int right = i - 1;
+
+            while (left < right) {
+                if (target == numbers[left] + numbers[right]) {
+                    answer++;
+                    break;
+                }
+
+                if (target > numbers[left] + numbers[right]){
+                    left ++;
+                    continue;
+                }
+
+                if(target < numbers[left] + numbers[right]){
+                    right--;
                 }
             }
         }
 
-        return false;
+        System.out.println(answer);
     }
 }
