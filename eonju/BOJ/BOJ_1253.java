@@ -26,17 +26,26 @@ class Main {
             int right = i - 1;
 
             while (left < right) {
+                if (left == i) {
+                    left++;
+                    continue;
+                }
+
+                if (right == i) {
+                    right--;
+                    continue;
+                }
                 if (target == numbers[left] + numbers[right]) {
                     answer++;
                     break;
                 }
 
-                if (target > numbers[left] + numbers[right]){
-                    left ++;
+                if (target > numbers[left] + numbers[right]) {
+                    left++;
                     continue;
                 }
 
-                if(target < numbers[left] + numbers[right]){
+                if (target < numbers[left] + numbers[right]) {
                     right--;
                 }
             }
