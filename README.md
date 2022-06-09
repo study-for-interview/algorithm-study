@@ -14,6 +14,18 @@
 
 ***
 
+## 2022 06/09 ~ 06/13
+| 난이도 | 문제 번호 | 문제 이름 | 분류 |
+|:------:|:----:|:---------:|:-----:|
+| ![](전찬의/resources/level-3.png) | [2020 KAKAO BLIND RECRUITMENT](https://programmers.co.kr/learn/courses/30/lessons/60062) | [외벽 점검](https://programmers.co.kr/learn/courses/30/lessons/60062) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [5569](https://www.acmicpc.net/problem/5569) | [출근 경로](https://www.acmicpc.net/problem/5569) | Blind |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16927](https://www.acmicpc.net/problem/16927) | [배열 돌리기 2](https://www.acmicpc.net/problem/16927) | Blind |
+
+
+
+
+<br> <br> <br>
+
 ## 2022 06/02 ~ 06/06
 | 난이도 | 문제 번호 | 문제 이름 | 분류 |
 |:------:|:----:|:---------:|:-----:|
