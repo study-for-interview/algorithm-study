@@ -1,101 +1,97 @@
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Solution {
 
-    private static int size;
+    private static List<int[]> weakCases;
+    private static List<int[]> distCases;
     private static int answer;
-    private static boolean[] visited;
 
     public static void main(String[] args) {
-        System.out.println(solution(12, new int[]{1, 5, 6, 10}, new int[]{1, 2, 3, 4}));
+//        System.out.println(solution(12, new int[]{1, 5, 6, 10}, new int[]{1, 2, 3, 4}));
         System.out.println(solution(12, new int[]{1, 3, 4, 9, 10}, new int[]{3, 5, 7}));
-        System.out.println(solution(100, new int[]{1, 50}, new int[]{1, 1}));
-        System.out.println(solution(100, new int[]{1, 50, 100}, new int[]{1, 1}));
+
     }
 
     public static int solution(int n, int[] weak, int[] dist) {
-        size = n;
-
-        PriorityQueue<Integer> queue = new PriorityQueue<>(Comparator.reverseOrder());
-
-        for (int i = 0; i < dist.length; i++) {
-            queue.add(dist[i]);
-        }
-
-        visited = new boolean[n];
+        weakCases = new ArrayList<>();
+        distCases = new ArrayList<>();
         answer = Integer.MAX_VALUE;
 
-        solve(0, weak, queue);
+        makeDistCases(0, Arrays.copyOf(dist, dist.length), dist);
+        makeWeakCases(0, Arrays.copyOf(weak, weak.length), weak);
+
+        for (int[] weakCase : weakCases) {
+            for (int[] distCase : distCases) {
+                checkWall(n, weakCase, distCase);
+            }
+        }
 
         if (answer == Integer.MAX_VALUE) {
-            return -1;
+            answer = -1;
         }
 
         return answer;
     }
 
-    public static void solve(int cnt, int[] weak, PriorityQueue<Integer> queue) {
-        if (queue.isEmpty()) {
-            if (isVisitedAll(weak)) {
-                answer = Math.min(answer, cnt);
-            }
-            return;
-        }
+    public static void checkWall(int n, int[] weakCase, int[] distCase) {
+        boolean[] isFixed = new boolean[n];
+        int distIdx = 0;
 
-        Integer dist = queue.poll();
-
-        for (int i = 0; i < weak.length; i++) {
-            int fixArea = weak[i];
-
-            if (fixArea < size && visited[fixArea]) {
+        for (int weakArea : weakCase) {
+            if (isFixed[weakArea]) {
                 continue;
             }
 
-            if (fixArea + dist < size) {
-                for (int j = fixArea; j < fixArea + dist; j++) {
-                    visited[j] = true;
-                }
-            } else {
-                int tmp = fixArea + dist - size;
-
-                for (int j = fixArea; j < size; j++) {
-                    visited[j] = true;
-                }
-
-                for (int j = 0; j < tmp; j++) {
-                    visited[j] = true;
-                }
+            if (distIdx >= distCase.length) {
+                return;
             }
 
-            solve(cnt + 1, weak, queue);
+            int dist = distCase[distIdx];
 
-            if (fixArea + dist < size) {
-                for (int j = fixArea; j < fixArea + dist; j++) {
-                    visited[j] = false;
-                }
+            if (weakArea + dist > n) {
+                Arrays.fill(isFixed, weakArea, n, true);
+                Arrays.fill(isFixed, 0, weakArea + dist - n, true);
             } else {
-                int tmp = fixArea + dist - size;
-
-                for (int j = fixArea; j < size; j++) {
-                    visited[j] = false;
-                }
-
-                for (int j = 0; j < tmp; j++) {
-                    visited[j] = false;
-                }
+                Arrays.fill(isFixed, weakArea, weakArea + dist, true);
             }
+
+            distIdx++;
+        }
+
+        answer = Math.min(answer, distIdx);
+    }
+
+    public static void makeWeakCases(int depth, int[] tmp, int[] weak) {
+        if (depth == weak.length) {
+            weakCases.add(Arrays.copyOf(tmp, tmp.length));
+            return;
+        }
+
+        for (int i = depth; i < weak.length; i++) {
+            swap(tmp, depth, i);
+            makeWeakCases(depth + 1, tmp, weak);
+            swap(tmp, depth, i);
         }
     }
 
-    public static boolean isVisitedAll(int[] weak) {
-        for (int i = 0; i < weak.length; i++) {
-            int needFixArea = weak[i];
-            if (needFixArea < size && !visited[needFixArea]) {
-                return false;
-            }
+    public static void makeDistCases(int depth, int[] tmp, int[] dist) {
+        if (depth == dist.length) {
+            distCases.add(Arrays.copyOf(tmp, tmp.length));
+            return;
         }
 
-        return true;
+        for (int i = depth; i < dist.length; i++) {
+            swap(tmp, depth, i);
+            makeDistCases(depth + 1, tmp, dist);
+            swap(tmp, depth, i);
+        }
+    }
+
+    public static void swap(int[] arr, int depth, int i) {
+        int tmp = arr[depth];
+        arr[depth] = arr[i];
+        arr[i] = tmp;
     }
 }
